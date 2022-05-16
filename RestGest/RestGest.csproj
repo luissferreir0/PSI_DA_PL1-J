@@ -46,14 +46,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Form_IndividualRestaurante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form_IndividualRestaurante.Designer.cs">
+      <DependentUpon>Form_IndividualRestaurante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Menu.Designer.cs">
+      <DependentUpon>Form_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Pedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Pedidos.Designer.cs">
+      <DependentUpon>Form_Pedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Principal.Designer.cs">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GestaoGlobalRestaurantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GestaoGlobalRestaurantes.Designer.cs">
+      <DependentUpon>Form_GestaoGlobalRestaurantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_GestaoClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_GestaoClientes.Designer.cs">
+      <DependentUpon>Form_GestaoClientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_IndividualRestaurante.resx">
+      <DependentUpon>Form_IndividualRestaurante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Menu.resx">
+      <DependentUpon>Form_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Pedidos.resx">
+      <DependentUpon>Form_Pedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Principal.resx">
+      <DependentUpon>Form_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GestaoGlobalRestaurantes.resx">
+      <DependentUpon>Form_GestaoGlobalRestaurantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_GestaoClientes.resx">
+      <DependentUpon>Form_GestaoClientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
