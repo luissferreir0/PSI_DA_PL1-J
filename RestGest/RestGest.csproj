@@ -55,17 +55,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Carros.cs">
-      <DependentUpon>RestGest.tt</DependentUpon>
-    </Compile>
     <Compile Include="Categoria.cs">
       <DependentUpon>RestGest.tt</DependentUpon>
     </Compile>
     <Compile Include="Cliente.cs">
       <DependentUpon>RestGest.tt</DependentUpon>
     </Compile>
-    <Compile Include="Clientes.cs">
-      <DependentUpon>RestGest.tt</DependentUpon>
+    <Compile Include="DB_RestGestDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DB_RestGestDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Estado.cs">
       <DependentUpon>RestGest.tt</DependentUpon>
@@ -118,9 +117,6 @@
     <Compile Include="Pagamento.cs">
       <DependentUpon>RestGest.tt</DependentUpon>
     </Compile>
-    <Compile Include="Parcelas.cs">
-      <DependentUpon>RestGest.tt</DependentUpon>
-    </Compile>
     <Compile Include="Pedido.cs">
       <DependentUpon>RestGest.tt</DependentUpon>
     </Compile>
@@ -146,9 +142,6 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>RestGest.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Servicos.cs">
-      <DependentUpon>RestGest.tt</DependentUpon>
     </Compile>
     <Compile Include="Trabalhador.cs">
       <DependentUpon>RestGest.tt</DependentUpon>
@@ -180,6 +173,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="DB_RestGestDataSet.xsc">
+      <DependentUpon>DB_RestGestDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DB_RestGestDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DB_RestGestDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DB_RestGestDataSet.xss">
+      <DependentUpon>DB_RestGestDataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

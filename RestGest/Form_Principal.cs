@@ -16,5 +16,11 @@ namespace RestGest
         {
             InitializeComponent();
         }
+
+        private void button_menus_Click(object sender, EventArgs e)
+        {
+            Form_Menu form_Menu = new Form_Menu();
+            form_Menu.ShowDialog();
+        }
     }
 }
