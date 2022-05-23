@@ -17,10 +17,28 @@ namespace RestGest
             InitializeComponent();
         }
 
-        private void button_menus_Click(object sender, EventArgs e)
+        private void toolStripButtonClientes_Click(object sender, EventArgs e) // Formulário Clientes
         {
-            Form_Menu form_Menu = new Form_Menu();
-            form_Menu.ShowDialog();
+            Form_GestaoClientes fclientes = new Form_GestaoClientes();
+            fclientes.Show();
+        }
+
+        private void toolStripButtonRestaurantes_Click(object sender, EventArgs e) // Formulário Restaurantes
+        {
+            Form_GestaoGlobalRestaurantes frestaurantes = new Form_GestaoGlobalRestaurantes();
+            frestaurantes.Show();
+        }
+
+        private void toolStripButtonPedidos_Click(object sender, EventArgs e) // Formulário Pedidos
+        {
+            Form_Pedidos fpedidos = new Form_Pedidos();
+            fpedidos.Show();
+        }
+
+        private void toolStripButtonMenu_Click(object sender, EventArgs e) // Formulário Menu
+        {
+            Form_Menu fmenu = new Form_Menu();
+            fmenu.Show();
         }
     }
 }

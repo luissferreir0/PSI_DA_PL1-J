@@ -20,7 +20,7 @@ namespace RestGest
         private void Form_Menu_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'dB_RestGestDataSet.RestauranteSet'. Você pode movê-la ou removê-la conforme necessário.
-            this.restauranteSetTableAdapter.Fill(this.dB_RestGestDataSet.RestauranteSet);
+            //this.restauranteSetTableAdapter.Fill(this.dB_RestGestDataSet.RestauranteSet);
         }
 
         private void restauranteSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
