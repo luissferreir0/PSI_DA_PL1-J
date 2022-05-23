@@ -22,6 +22,7 @@ namespace RestGest
     
         public int Id { get; set; }
         public bool Ativo { get; set; }
+        public string MetodoP { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pagamento> Pagamento { get; set; }
