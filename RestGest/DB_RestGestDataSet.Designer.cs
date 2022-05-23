@@ -2082,7 +2082,7 @@ namespace RestGest {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public ItemMenuSetRow AddItemMenuSetRow(string Nome, string Fotografia, string Ingredientes, string Preco, bool Ativo, CategoriaSetRow parentCategoriaSetRowByFK_CategoriaItemMenu) {
+            public ItemMenuSetRow AddItemMenuSetRow(string Nome, byte[] Fotografia, string Ingredientes, string Preco, bool Ativo, CategoriaSetRow parentCategoriaSetRowByFK_CategoriaItemMenu) {
                 ItemMenuSetRow rowItemMenuSetRow = ((ItemMenuSetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2140,7 +2140,7 @@ namespace RestGest {
                 base.Columns.Add(this.columnId);
                 this.columnNome = new global::System.Data.DataColumn("Nome", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNome);
-                this.columnFotografia = new global::System.Data.DataColumn("Fotografia", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnFotografia = new global::System.Data.DataColumn("Fotografia", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFotografia);
                 this.columnIngredientes = new global::System.Data.DataColumn("Ingredientes", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnIngredientes);
@@ -2161,7 +2161,6 @@ namespace RestGest {
                 this.columnNome.AllowDBNull = false;
                 this.columnNome.MaxLength = 2147483647;
                 this.columnFotografia.AllowDBNull = false;
-                this.columnFotografia.MaxLength = 2147483647;
                 this.columnIngredientes.AllowDBNull = false;
                 this.columnIngredientes.MaxLength = 2147483647;
                 this.columnPreco.AllowDBNull = false;
@@ -2305,6 +2304,8 @@ namespace RestGest {
             
             private global::System.Data.DataColumn columnAtivo;
             
+            private global::System.Data.DataColumn columnMetodoP;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public MetodoPagamentoSetDataTable() {
@@ -2356,6 +2357,14 @@ namespace RestGest {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public global::System.Data.DataColumn MetodoPColumn {
+                get {
+                    return this.columnMetodoP;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2391,11 +2400,12 @@ namespace RestGest {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public MetodoPagamentoSetRow AddMetodoPagamentoSetRow(bool Ativo) {
+            public MetodoPagamentoSetRow AddMetodoPagamentoSetRow(bool Ativo, string MetodoP) {
                 MetodoPagamentoSetRow rowMetodoPagamentoSetRow = ((MetodoPagamentoSetRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
-                        Ativo};
+                        Ativo,
+                        MetodoP};
                 rowMetodoPagamentoSetRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowMetodoPagamentoSetRow);
                 return rowMetodoPagamentoSetRow;
@@ -2427,6 +2437,7 @@ namespace RestGest {
             internal void InitVars() {
                 this.columnId = base.Columns["Id"];
                 this.columnAtivo = base.Columns["Ativo"];
+                this.columnMetodoP = base.Columns["MetodoP"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2436,6 +2447,8 @@ namespace RestGest {
                 base.Columns.Add(this.columnId);
                 this.columnAtivo = new global::System.Data.DataColumn("Ativo", typeof(bool), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnAtivo);
+                this.columnMetodoP = new global::System.Data.DataColumn("MetodoP", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMetodoP);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnId}, true));
                 this.columnId.AutoIncrement = true;
@@ -2445,6 +2458,8 @@ namespace RestGest {
                 this.columnId.ReadOnly = true;
                 this.columnId.Unique = true;
                 this.columnAtivo.AllowDBNull = false;
+                this.columnMetodoP.AllowDBNull = false;
+                this.columnMetodoP.MaxLength = 2147483647;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5033,9 +5048,9 @@ namespace RestGest {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Fotografia {
+            public byte[] Fotografia {
                 get {
-                    return ((string)(this[this.tableItemMenuSet.FotografiaColumn]));
+                    return ((byte[])(this[this.tableItemMenuSet.FotografiaColumn]));
                 }
                 set {
                     this[this.tableItemMenuSet.FotografiaColumn] = value;
@@ -5153,6 +5168,17 @@ namespace RestGest {
                 }
                 set {
                     this[this.tableMetodoPagamentoSet.AtivoColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public string MetodoP {
+                get {
+                    return ((string)(this[this.tableMetodoPagamentoSet.MetodoPColumn]));
+                }
+                set {
+                    this[this.tableMetodoPagamentoSet.MetodoPColumn] = value;
                 }
             }
             
@@ -7986,27 +8012,31 @@ SELECT Id, Nome, Fotografia, Ingredientes, Preco, Ativo, CategoriaId FROM ItemMe
             tableMapping.DataSetTable = "MetodoPagamentoSet";
             tableMapping.ColumnMappings.Add("Id", "Id");
             tableMapping.ColumnMappings.Add("Ativo", "Ativo");
+            tableMapping.ColumnMappings.Add("MetodoP", "MetodoP");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [dbo].[MetodoPagamentoSet] WHERE (([Id] = @Original_Id) AND ([Ativo] " +
-                "= @Original_Ativo))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM [MetodoPagamentoSet] WHERE (([Id] = @Original_Id) AND ([Ativo] = @Ori" +
+                "ginal_Ativo))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ativo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ativo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [dbo].[MetodoPagamentoSet] ([Ativo]) VALUES (@Ativo);\r\nSELECT Id, Ati" +
-                "vo FROM MetodoPagamentoSet WHERE (Id = SCOPE_IDENTITY())";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [MetodoPagamentoSet] ([Ativo], [MetodoP]) VALUES (@Ativo, @MetodoP);\r" +
+                "\nSELECT Id, Ativo, MetodoP FROM MetodoPagamentoSet WHERE (Id = SCOPE_IDENTITY())" +
+                "";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ativo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ativo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MetodoP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MetodoP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [dbo].[MetodoPagamentoSet] SET [Ativo] = @Ativo WHERE (([Id] = @Original_I" +
-                "d) AND ([Ativo] = @Original_Ativo));\r\nSELECT Id, Ativo FROM MetodoPagamentoSet W" +
-                "HERE (Id = @Id)";
+            this._adapter.UpdateCommand.CommandText = "UPDATE [MetodoPagamentoSet] SET [Ativo] = @Ativo, [MetodoP] = @MetodoP WHERE (([I" +
+                "d] = @Original_Id) AND ([Ativo] = @Original_Ativo));\r\nSELECT Id, Ativo, MetodoP " +
+                "FROM MetodoPagamentoSet WHERE (Id = @Id)";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Ativo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ativo", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@MetodoP", global::System.Data.SqlDbType.NVarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "MetodoP", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Id", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Ativo", global::System.Data.SqlDbType.Bit, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Ativo", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.Input, 0, 0, "Id", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
@@ -8025,7 +8055,7 @@ SELECT Id, Nome, Fotografia, Ingredientes, Preco, Ativo, CategoriaId FROM ItemMe
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Id, Ativo FROM dbo.MetodoPagamentoSet";
+            this._commandCollection[0].CommandText = "SELECT Id, Ativo, MetodoP FROM MetodoPagamentoSet";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8109,8 +8139,14 @@ SELECT Id, Nome, Fotografia, Ingredientes, Preco, Ativo, CategoriaId FROM ItemMe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(bool Ativo) {
+        public virtual int Insert(bool Ativo, string MetodoP) {
             this.Adapter.InsertCommand.Parameters[0].Value = ((bool)(Ativo));
+            if ((MetodoP == null)) {
+                throw new global::System.ArgumentNullException("MetodoP");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(MetodoP));
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8131,11 +8167,17 @@ SELECT Id, Nome, Fotografia, Ingredientes, Preco, Ativo, CategoriaId FROM ItemMe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(bool Ativo, int Original_Id, bool Original_Ativo, int Id) {
+        public virtual int Update(bool Ativo, string MetodoP, int Original_Id, bool Original_Ativo, int Id) {
             this.Adapter.UpdateCommand.Parameters[0].Value = ((bool)(Ativo));
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(Original_Id));
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((bool)(Original_Ativo));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Id));
+            if ((MetodoP == null)) {
+                throw new global::System.ArgumentNullException("MetodoP");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(MetodoP));
+            }
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(Original_Id));
+            this.Adapter.UpdateCommand.Parameters[3].Value = ((bool)(Original_Ativo));
+            this.Adapter.UpdateCommand.Parameters[4].Value = ((int)(Id));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -8156,8 +8198,8 @@ SELECT Id, Nome, Fotografia, Ingredientes, Preco, Ativo, CategoriaId FROM ItemMe
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(bool Ativo, int Original_Id, bool Original_Ativo) {
-            return this.Update(Ativo, Original_Id, Original_Ativo, Original_Id);
+        public virtual int Update(bool Ativo, string MetodoP, int Original_Id, bool Original_Ativo) {
+            return this.Update(Ativo, MetodoP, Original_Id, Original_Ativo, Original_Id);
         }
     }
     
