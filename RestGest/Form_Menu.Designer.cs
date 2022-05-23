@@ -29,13 +29,26 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.Label nomeLabel;
+            System.Windows.Forms.Label ingredientesLabel;
+            System.Windows.Forms.Label precoLabel;
+            System.Windows.Forms.Label categoriaIdLabel;
+            System.Windows.Forms.Label idLabel;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Menu));
+<<<<<<< Updated upstream
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label ingredientesLabel;
             System.Windows.Forms.Label precoLabel;
             System.Windows.Forms.Label categoriaIdLabel;
             System.Windows.Forms.Label fotografiaLabel;
             this.restauranteSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+=======
+            this.dB_RestGestDataSet = new RestGest.DB_RestGestDataSet();
+            this.itemMenuSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.itemMenuSetTableAdapter = new RestGest.DB_RestGestDataSetTableAdapters.ItemMenuSetTableAdapter();
+            this.tableAdapterManager = new RestGest.DB_RestGestDataSetTableAdapters.TableAdapterManager();
+            this.itemMenuSetBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+>>>>>>> Stashed changes
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -47,6 +60,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+<<<<<<< Updated upstream
             this.restauranteSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.restauranteSetDataGridView = new System.Windows.Forms.DataGridView();
             this.groupBox_Rest = new System.Windows.Forms.GroupBox();
@@ -75,15 +89,47 @@
             this.itemMenuSetTableAdapter = new RestGest.DB_RestGestDataSetTableAdapters.ItemMenuSetTableAdapter();
             this.categoriaSetTableAdapter1 = new RestGest.DB_RestGestDataSetTableAdapters.CategoriaSetTableAdapter();
             this.fotografiaTextBox = new System.Windows.Forms.TextBox();
+=======
+            this.itemMenuSetBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
+            this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.fotografiaPictureBox = new System.Windows.Forms.PictureBox();
+            this.ingredientesTextBox = new System.Windows.Forms.TextBox();
+            this.precoTextBox = new System.Windows.Forms.TextBox();
+            this.ativoCheckBox = new System.Windows.Forms.CheckBox();
+            this.categoriaIdComboBox = new System.Windows.Forms.ComboBox();
+            this.buttonNitem = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.buttonAitem = new System.Windows.Forms.Button();
+            this.buttonDitem = new System.Windows.Forms.Button();
+            this.idComboBox = new System.Windows.Forms.ComboBox();
+            this.itemMenuSetDataGridView = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+>>>>>>> Stashed changes
             nomeLabel = new System.Windows.Forms.Label();
             ingredientesLabel = new System.Windows.Forms.Label();
             precoLabel = new System.Windows.Forms.Label();
             categoriaIdLabel = new System.Windows.Forms.Label();
+<<<<<<< Updated upstream
             fotografiaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingNavigator)).BeginInit();
             this.restauranteSetBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteSetDataGridView)).BeginInit();
             this.groupBox_Rest.SuspendLayout();
+=======
+            idLabel = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RestGestDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingNavigator)).BeginInit();
+            this.itemMenuSetBindingNavigator.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fotografiaPictureBox)).BeginInit();
+            this.groupBox1.SuspendLayout();
+>>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetDataGridView)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).BeginInit();
@@ -92,7 +138,56 @@
             ((System.ComponentModel.ISupportInitialize)(this.restauranteSetBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
+<<<<<<< Updated upstream
             // restauranteSetBindingNavigator
+=======
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(18, 58);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(47, 16);
+            nomeLabel.TabIndex = 3;
+            nomeLabel.Text = "Nome:";
+            // 
+            // ingredientesLabel
+            // 
+            ingredientesLabel.AutoSize = true;
+            ingredientesLabel.Location = new System.Drawing.Point(18, 86);
+            ingredientesLabel.Name = "ingredientesLabel";
+            ingredientesLabel.Size = new System.Drawing.Size(84, 16);
+            ingredientesLabel.TabIndex = 7;
+            ingredientesLabel.Text = "Ingredientes:";
+            // 
+            // precoLabel
+            // 
+            precoLabel.AutoSize = true;
+            precoLabel.Location = new System.Drawing.Point(18, 114);
+            precoLabel.Name = "precoLabel";
+            precoLabel.Size = new System.Drawing.Size(46, 16);
+            precoLabel.TabIndex = 9;
+            precoLabel.Text = "Preco:";
+            // 
+            // categoriaIdLabel
+            // 
+            categoriaIdLabel.AutoSize = true;
+            categoriaIdLabel.Location = new System.Drawing.Point(18, 142);
+            categoriaIdLabel.Name = "categoriaIdLabel";
+            categoriaIdLabel.Size = new System.Drawing.Size(69, 16);
+            categoriaIdLabel.TabIndex = 13;
+            categoriaIdLabel.Text = "Categoria:";
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(18, 28);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(21, 16);
+            idLabel.TabIndex = 15;
+            idLabel.Text = "Id:";
+            // 
+            // dB_RestGestDataSet
+>>>>>>> Stashed changes
             // 
             this.restauranteSetBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.restauranteSetBindingNavigator.BindingSource = this.restauranteSetBindingSource;
@@ -111,6 +206,7 @@
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
             this.bindingNavigatorDeleteItem,
+<<<<<<< Updated upstream
             this.restauranteSetBindingNavigatorSaveItem});
             this.restauranteSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.restauranteSetBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -122,6 +218,44 @@
             this.restauranteSetBindingNavigator.Size = new System.Drawing.Size(1369, 27);
             this.restauranteSetBindingNavigator.TabIndex = 0;
             this.restauranteSetBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(48, 24);
+            this.bindingNavigatorCountItem.Text = "de {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(29, 24);
+            this.bindingNavigatorDeleteItem.Text = "Eliminar";
+=======
+            this.itemMenuSetBindingNavigatorSaveItem});
+            this.itemMenuSetBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.itemMenuSetBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.itemMenuSetBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.itemMenuSetBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.itemMenuSetBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.itemMenuSetBindingNavigator.Name = "itemMenuSetBindingNavigator";
+            this.itemMenuSetBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.itemMenuSetBindingNavigator.Size = new System.Drawing.Size(1389, 27);
+            this.itemMenuSetBindingNavigator.TabIndex = 0;
+            this.itemMenuSetBindingNavigator.Text = "bindingNavigator1";
+>>>>>>> Stashed changes
             // 
             // bindingNavigatorAddNewItem
             // 
@@ -208,6 +342,7 @@
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 27);
+<<<<<<< Updated upstream
             // 
             // restauranteSetBindingNavigatorSaveItem
             // 
@@ -217,9 +352,12 @@
             this.restauranteSetBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
             this.restauranteSetBindingNavigatorSaveItem.Text = "Salvar Dados";
             this.restauranteSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.restauranteSetBindingNavigatorSaveItem_Click);
+=======
+>>>>>>> Stashed changes
             // 
             // restauranteSetDataGridView
             // 
+<<<<<<< Updated upstream
             this.restauranteSetDataGridView.AutoGenerateColumns = false;
             this.restauranteSetDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.restauranteSetDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -242,12 +380,138 @@
             this.groupBox_Rest.TabIndex = 2;
             this.groupBox_Rest.TabStop = false;
             this.groupBox_Rest.Text = "SelectRest (Temp)";
+=======
+            this.itemMenuSetBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.itemMenuSetBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("itemMenuSetBindingNavigatorSaveItem.Image")));
+            this.itemMenuSetBindingNavigatorSaveItem.Name = "itemMenuSetBindingNavigatorSaveItem";
+            this.itemMenuSetBindingNavigatorSaveItem.Size = new System.Drawing.Size(29, 24);
+            this.itemMenuSetBindingNavigatorSaveItem.Text = "Salvar Dados";
+            this.itemMenuSetBindingNavigatorSaveItem.Click += new System.EventHandler(this.itemMenuSetBindingNavigatorSaveItem_Click);
+>>>>>>> Stashed changes
+            // 
+            // nomeTextBox
+            // 
+            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Nome", true));
+            this.nomeTextBox.Location = new System.Drawing.Point(108, 55);
+            this.nomeTextBox.Name = "nomeTextBox";
+            this.nomeTextBox.Size = new System.Drawing.Size(288, 22);
+            this.nomeTextBox.TabIndex = 4;
+            // 
+            // fotografiaPictureBox
+            // 
+            this.fotografiaPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.itemMenuSetBindingSource, "Fotografia", true));
+            this.fotografiaPictureBox.Location = new System.Drawing.Point(420, 399);
+            this.fotografiaPictureBox.Name = "fotografiaPictureBox";
+            this.fotografiaPictureBox.Size = new System.Drawing.Size(949, 295);
+            this.fotografiaPictureBox.TabIndex = 6;
+            this.fotografiaPictureBox.TabStop = false;
+            // 
+            // ingredientesTextBox
+            // 
+            this.ingredientesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Ingredientes", true));
+            this.ingredientesTextBox.Location = new System.Drawing.Point(108, 83);
+            this.ingredientesTextBox.Name = "ingredientesTextBox";
+            this.ingredientesTextBox.Size = new System.Drawing.Size(288, 22);
+            this.ingredientesTextBox.TabIndex = 8;
+            // 
+            // precoTextBox
+            // 
+            this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Preco", true));
+            this.precoTextBox.Location = new System.Drawing.Point(108, 111);
+            this.precoTextBox.Name = "precoTextBox";
+            this.precoTextBox.Size = new System.Drawing.Size(288, 22);
+            this.precoTextBox.TabIndex = 10;
+            // 
+            // ativoCheckBox
+            // 
+            this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.itemMenuSetBindingSource, "Ativo", true));
+            this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ativoCheckBox.Location = new System.Drawing.Point(206, 169);
+            this.ativoCheckBox.Name = "ativoCheckBox";
+            this.ativoCheckBox.Size = new System.Drawing.Size(190, 57);
+            this.ativoCheckBox.TabIndex = 12;
+            this.ativoCheckBox.Text = "Ativo";
+            this.ativoCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // categoriaIdComboBox
+            // 
+            this.categoriaIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "CategoriaId", true));
+            this.categoriaIdComboBox.DataSource = this.dB_RestGestDataSet;
+            this.categoriaIdComboBox.DisplayMember = "CategoriaSet.Nome";
+            this.categoriaIdComboBox.FormattingEnabled = true;
+            this.categoriaIdComboBox.Location = new System.Drawing.Point(108, 139);
+            this.categoriaIdComboBox.Name = "categoriaIdComboBox";
+            this.categoriaIdComboBox.Size = new System.Drawing.Size(288, 24);
+            this.categoriaIdComboBox.TabIndex = 14;
+            // 
+            // buttonNitem
+            // 
+            this.buttonNitem.Location = new System.Drawing.Point(108, 232);
+            this.buttonNitem.Name = "buttonNitem";
+            this.buttonNitem.Size = new System.Drawing.Size(92, 57);
+            this.buttonNitem.TabIndex = 15;
+            this.buttonNitem.Text = "New Item";
+            this.buttonNitem.UseVisualStyleBackColor = true;
+            this.buttonNitem.Click += new System.EventHandler(this.buttonNitem_Click);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonAitem);
+            this.groupBox1.Controls.Add(this.buttonDitem);
+            this.groupBox1.Controls.Add(idLabel);
+            this.groupBox1.Controls.Add(this.idComboBox);
+            this.groupBox1.Controls.Add(this.nomeTextBox);
+            this.groupBox1.Controls.Add(this.buttonNitem);
+            this.groupBox1.Controls.Add(nomeLabel);
+            this.groupBox1.Controls.Add(this.precoTextBox);
+            this.groupBox1.Controls.Add(this.ativoCheckBox);
+            this.groupBox1.Controls.Add(precoLabel);
+            this.groupBox1.Controls.Add(ingredientesLabel);
+            this.groupBox1.Controls.Add(this.ingredientesTextBox);
+            this.groupBox1.Controls.Add(categoriaIdLabel);
+            this.groupBox1.Controls.Add(this.categoriaIdComboBox);
+            this.groupBox1.Location = new System.Drawing.Point(12, 399);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(402, 295);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Novo Item";
+            // 
+            // buttonAitem
+            // 
+            this.buttonAitem.Location = new System.Drawing.Point(304, 232);
+            this.buttonAitem.Name = "buttonAitem";
+            this.buttonAitem.Size = new System.Drawing.Size(92, 57);
+            this.buttonAitem.TabIndex = 18;
+            this.buttonAitem.Text = "Alterar Item";
+            this.buttonAitem.UseVisualStyleBackColor = true;
+            // 
+            // buttonDitem
+            // 
+            this.buttonDitem.Location = new System.Drawing.Point(206, 232);
+            this.buttonDitem.Name = "buttonDitem";
+            this.buttonDitem.Size = new System.Drawing.Size(92, 57);
+            this.buttonDitem.TabIndex = 17;
+            this.buttonDitem.Text = "Delete Item";
+            this.buttonDitem.UseVisualStyleBackColor = true;
+            // 
+            // idComboBox
+            // 
+            this.idComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Id", true));
+            this.idComboBox.DataSource = this.dB_RestGestDataSet;
+            this.idComboBox.DisplayMember = "ItemMenuSet.Id";
+            this.idComboBox.FormattingEnabled = true;
+            this.idComboBox.Location = new System.Drawing.Point(45, 25);
+            this.idComboBox.Name = "idComboBox";
+            this.idComboBox.Size = new System.Drawing.Size(351, 24);
+            this.idComboBox.TabIndex = 16;
             // 
             // itemMenuSetDataGridView
             // 
             this.itemMenuSetDataGridView.AutoGenerateColumns = false;
             this.itemMenuSetDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.itemMenuSetDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+<<<<<<< Updated upstream
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
@@ -255,11 +519,21 @@
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewCheckBoxColumn1,
             this.dataGridViewTextBoxColumn8});
+=======
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewImageColumn1,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewCheckBoxColumn1,
+            this.dataGridViewTextBoxColumn5});
+>>>>>>> Stashed changes
             this.itemMenuSetDataGridView.DataSource = this.itemMenuSetBindingSource;
             this.itemMenuSetDataGridView.Location = new System.Drawing.Point(374, 31);
             this.itemMenuSetDataGridView.Name = "itemMenuSetDataGridView";
             this.itemMenuSetDataGridView.RowHeadersWidth = 51;
             this.itemMenuSetDataGridView.RowTemplate.Height = 24;
+<<<<<<< Updated upstream
             this.itemMenuSetDataGridView.Size = new System.Drawing.Size(975, 220);
             this.itemMenuSetDataGridView.TabIndex = 2;
             // 
@@ -364,6 +638,10 @@
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "New Item";
+=======
+            this.itemMenuSetDataGridView.Size = new System.Drawing.Size(1357, 363);
+            this.itemMenuSetDataGridView.TabIndex = 16;
+>>>>>>> Stashed changes
             // 
             // itemMenuSetBindingSource
             // 
@@ -380,10 +658,23 @@
             this.categoriaSetBindingSource.DataMember = "CategoriaSet";
             this.categoriaSetBindingSource.DataSource = this.dB_RestGestDataSet;
             // 
+            // dataGridViewImageColumn1
+            // 
+            this.dataGridViewImageColumn1.DataPropertyName = "Fotografia";
+            this.dataGridViewImageColumn1.HeaderText = "Fotografia";
+            this.dataGridViewImageColumn1.MinimumWidth = 6;
+            this.dataGridViewImageColumn1.Name = "dataGridViewImageColumn1";
+            this.dataGridViewImageColumn1.Width = 125;
+            // 
             // dataGridViewTextBoxColumn3
             // 
+<<<<<<< Updated upstream
             this.dataGridViewTextBoxColumn3.DataPropertyName = "Id";
             this.dataGridViewTextBoxColumn3.HeaderText = "Id";
+=======
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Ingredientes";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Ingredientes";
+>>>>>>> Stashed changes
             this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -391,12 +682,18 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
+<<<<<<< Updated upstream
             this.dataGridViewTextBoxColumn4.DataPropertyName = "Nome";
             this.dataGridViewTextBoxColumn4.HeaderText = "Nome";
+=======
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Preco";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Preco";
+>>>>>>> Stashed changes
             this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.Width = 125;
             // 
+<<<<<<< Updated upstream
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.DataPropertyName = "Fotografia";
@@ -421,6 +718,8 @@
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.Width = 125;
             // 
+=======
+>>>>>>> Stashed changes
             // dataGridViewCheckBoxColumn1
             // 
             this.dataGridViewCheckBoxColumn1.DataPropertyName = "Ativo";
@@ -429,6 +728,7 @@
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
             this.dataGridViewCheckBoxColumn1.Width = 125;
             // 
+<<<<<<< Updated upstream
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.DataPropertyName = "CategoriaId";
@@ -505,11 +805,21 @@
             this.fotografiaTextBox.Name = "fotografiaTextBox";
             this.fotografiaTextBox.Size = new System.Drawing.Size(173, 22);
             this.fotografiaTextBox.TabIndex = 5;
+=======
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "CategoriaId";
+            this.dataGridViewTextBoxColumn5.HeaderText = "CategoriaId";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
+>>>>>>> Stashed changes
             // 
             // Form_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+<<<<<<< Updated upstream
             this.ClientSize = new System.Drawing.Size(1369, 695);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.itemMenuSetDataGridView);
@@ -523,6 +833,24 @@
             this.restauranteSetBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.restauranteSetDataGridView)).EndInit();
             this.groupBox_Rest.ResumeLayout(false);
+=======
+            this.ClientSize = new System.Drawing.Size(1389, 714);
+            this.Controls.Add(this.itemMenuSetDataGridView);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.fotografiaPictureBox);
+            this.Controls.Add(this.itemMenuSetBindingNavigator);
+            this.Name = "Form_Menu";
+            this.Text = "Menu";
+            this.Load += new System.EventHandler(this.Form_Menu_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RestGestDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingNavigator)).EndInit();
+            this.itemMenuSetBindingNavigator.ResumeLayout(false);
+            this.itemMenuSetBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fotografiaPictureBox)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+>>>>>>> Stashed changes
             ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetDataGridView)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -554,6 +882,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+<<<<<<< Updated upstream
         private System.Windows.Forms.ToolStripButton restauranteSetBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView restauranteSetDataGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -578,5 +907,27 @@
         private DB_RestGestDataSetTableAdapters.CategoriaSetTableAdapter categoriaSetTableAdapter1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox fotografiaTextBox;
+=======
+        private System.Windows.Forms.ToolStripButton itemMenuSetBindingNavigatorSaveItem;
+        private System.Windows.Forms.TextBox nomeTextBox;
+        private System.Windows.Forms.PictureBox fotografiaPictureBox;
+        private System.Windows.Forms.TextBox ingredientesTextBox;
+        private System.Windows.Forms.TextBox precoTextBox;
+        private System.Windows.Forms.CheckBox ativoCheckBox;
+        private System.Windows.Forms.ComboBox categoriaIdComboBox;
+        private System.Windows.Forms.Button buttonNitem;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button buttonDitem;
+        private System.Windows.Forms.ComboBox idComboBox;
+        private System.Windows.Forms.Button buttonAitem;
+        private System.Windows.Forms.DataGridView itemMenuSetDataGridView;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewImageColumn dataGridViewImageColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+>>>>>>> Stashed changes
     }
 }

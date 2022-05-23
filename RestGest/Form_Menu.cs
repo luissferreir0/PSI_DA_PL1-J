@@ -6,15 +6,23 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 using System.Windows.Forms;
 
 namespace RestGest
 {
     public partial class Form_Menu : Form
     {
+        private DB_RestGestDataSet restGest;
+
         public Form_Menu()
         {
             InitializeComponent();
+
+            restGest = new DB_RestGestDataSet();
+            (from menu in restGest.ItemMenuSet orderby menu.Id select menu).Load();
+
+            itemMenuSetBindingSource.DataSource = restGest.ItemMenuSet.Local.ToBindingList();
         }
 
         private void Form_Menu_Load(object sender, EventArgs e)
@@ -33,6 +41,11 @@ namespace RestGest
             this.restauranteSetBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dB_RestGestDataSet);
 
+        }
+
+        private void buttonNitem_Click(object sender, EventArgs e)
+        {
+            restGest.SaveChances();
         }
     }
 }
