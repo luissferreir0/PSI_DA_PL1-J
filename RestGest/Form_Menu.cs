@@ -17,21 +17,18 @@ namespace RestGest
             InitializeComponent();
         }
 
-        private void Form_Menu_Load(object sender, EventArgs e)
-        {
-            // TODO: esta linha de código carrega dados na tabela 'dB_RestGestDataSet.CategoriaSet'. Você pode movê-la ou removê-la conforme necessário.
-            this.categoriaSetTableAdapter1.Fill(this.dB_RestGestDataSet.CategoriaSet);
-            // TODO: esta linha de código carrega dados na tabela 'dB_RestGestDataSet.ItemMenuSet'. Você pode movê-la ou removê-la conforme necessário.
-            this.itemMenuSetTableAdapter.Fill(this.dB_RestGestDataSet.ItemMenuSet);
-            // TODO: esta linha de código carrega dados na tabela 'dB_RestGestDataSet.RestauranteSet'. Você pode movê-la ou removê-la conforme necessário.
-            //this.restauranteSetTableAdapter.Fill(this.dB_RestGestDataSet.RestauranteSet);
-        }
-
-        private void restauranteSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
+        private void itemMenuSetBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
-            this.restauranteSetBindingSource.EndEdit();
+            this.itemMenuSetBindingSource.EndEdit();
             this.tableAdapterManager.UpdateAll(this.dB_RestGestDataSet);
+
+        }
+
+        private void Form_Menu_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'dB_RestGestDataSet.ItemMenuSet'. Você pode movê-la ou removê-la conforme necessário.
+            this.itemMenuSetTableAdapter.Fill(this.dB_RestGestDataSet.ItemMenuSet);
 
         }
     }
