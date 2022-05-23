@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/18/2022 09:04:38
+-- Date Created: 05/23/2022 14:58:49
 -- Generated from EDMX file: C:\Users\bm395\OneDrive\Documentos\GitHub\PSI_DA_PL1-J\RestGest\RestGest.edmx
 -- --------------------------------------------------
 
@@ -142,9 +142,9 @@ GO
 CREATE TABLE [dbo].[ItemMenuSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Nome] nvarchar(max)  NOT NULL,
-    [Fotografia] nvarchar(max)  NOT NULL,
+    [Fotografia] varbinary(max)  NOT NULL,
     [Ingredientes] nvarchar(max)  NOT NULL,
-    [Preco] nvarchar(max)  NOT NULL,
+    [Preco] decimal(18,0)  NOT NULL,
     [Ativo] bit  NOT NULL,
     [CategoriaId] int  NOT NULL
 );
@@ -171,7 +171,7 @@ GO
 -- Creating table 'PagamentoSet'
 CREATE TABLE [dbo].[PagamentoSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Valor] nvarchar(max)  NOT NULL,
+    [Valor] bigint  NOT NULL,
     [MetodoPagamentoId] int  NOT NULL,
     [PedidoId] int  NOT NULL
 );
@@ -180,7 +180,8 @@ GO
 -- Creating table 'MetodoPagamentoSet'
 CREATE TABLE [dbo].[MetodoPagamentoSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Ativo] bit  NOT NULL
+    [Ativo] bit  NOT NULL,
+    [MetodoP] nvarchar(max)  NOT NULL
 );
 GO
 

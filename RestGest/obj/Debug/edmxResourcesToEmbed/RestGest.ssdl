@@ -109,9 +109,9 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Nome" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Fotografia" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Fotografia" Type="tinyint" Nullable="false" />
     <Property Name="Ingredientes" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Preco" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Preco" Type="decimal" Nullable="false" />
     <Property Name="Ativo" Type="bit" Nullable="false" />
     <Property Name="CategoriaId" Type="int" Nullable="false" />
   </EntityType>
@@ -138,7 +138,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Valor" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Valor" Type="bigint" Nullable="false" />
     <Property Name="MetodoPagamentoId" Type="int" Nullable="false" />
     <Property Name="PedidoId" Type="int" Nullable="false" />
   </EntityType>
@@ -148,6 +148,7 @@
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Ativo" Type="bit" Nullable="false" />
+    <Property Name="MetodoP" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="MoradaSet">
     <Key>
