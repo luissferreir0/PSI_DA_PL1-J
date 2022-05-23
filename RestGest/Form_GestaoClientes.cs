@@ -16,5 +16,20 @@ namespace RestGest
         {
             InitializeComponent();
         }
+
+        private void buttonRemoverCliente_Click(object sender, EventArgs e) // Remover Cliente
+        {
+
+        }
+
+        private void buttonCriarCliente_Click(object sender, EventArgs e) // Criar Cliente
+        {
+
+        }
+
+        private void buttonAlterarDados_Click(object sender, EventArgs e) // Alterar Dados dos Clientes
+        {
+
+        }
     }
 }
