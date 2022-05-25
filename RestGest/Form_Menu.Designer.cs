@@ -46,9 +46,9 @@
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.categoriaIdComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonNitem = new System.Windows.Forms.Button();
-            this.buttonAitem = new System.Windows.Forms.Button();
             this.buttonDitem = new System.Windows.Forms.Button();
+            this.buttonAitem = new System.Windows.Forms.Button();
+            this.buttonNitem = new System.Windows.Forms.Button();
             idLabel = new System.Windows.Forms.Label();
             nomeLabel = new System.Windows.Forms.Label();
             ingredientesLabel = new System.Windows.Forms.Label();
@@ -59,6 +59,51 @@
             ((System.ComponentModel.ISupportInitialize)(this.fotografiaPictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // idLabel
+            // 
+            idLabel.AutoSize = true;
+            idLabel.Location = new System.Drawing.Point(83, 50);
+            idLabel.Name = "idLabel";
+            idLabel.Size = new System.Drawing.Size(21, 16);
+            idLabel.TabIndex = 1;
+            idLabel.Text = "Id:";
+            // 
+            // nomeLabel
+            // 
+            nomeLabel.AutoSize = true;
+            nomeLabel.Location = new System.Drawing.Point(57, 80);
+            nomeLabel.Name = "nomeLabel";
+            nomeLabel.Size = new System.Drawing.Size(47, 16);
+            nomeLabel.TabIndex = 3;
+            nomeLabel.Text = "Nome:";
+            // 
+            // ingredientesLabel
+            // 
+            ingredientesLabel.AutoSize = true;
+            ingredientesLabel.Location = new System.Drawing.Point(20, 137);
+            ingredientesLabel.Name = "ingredientesLabel";
+            ingredientesLabel.Size = new System.Drawing.Size(84, 16);
+            ingredientesLabel.TabIndex = 7;
+            ingredientesLabel.Text = "Ingredientes:";
+            // 
+            // precoLabel
+            // 
+            precoLabel.AutoSize = true;
+            precoLabel.Location = new System.Drawing.Point(57, 194);
+            precoLabel.Name = "precoLabel";
+            precoLabel.Size = new System.Drawing.Size(46, 16);
+            precoLabel.TabIndex = 9;
+            precoLabel.Text = "Preco:";
+            // 
+            // categoriaIdLabel
+            // 
+            categoriaIdLabel.AutoSize = true;
+            categoriaIdLabel.Location = new System.Drawing.Point(21, 222);
+            categoriaIdLabel.Name = "categoriaIdLabel";
+            categoriaIdLabel.Size = new System.Drawing.Size(83, 16);
+            categoriaIdLabel.TabIndex = 13;
+            categoriaIdLabel.Text = "Categoria Id:";
             // 
             // dB_RestGestDataSet
             // 
@@ -92,37 +137,19 @@
             this.tableAdapterManager.RestauranteSetTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = RestGest.DB_RestGestDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(6, 82);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(21, 16);
-            idLabel.TabIndex = 1;
-            idLabel.Text = "Id:";
-            // 
             // idComboBox
             // 
             this.idComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Id", true));
             this.idComboBox.FormattingEnabled = true;
-            this.idComboBox.Location = new System.Drawing.Point(96, 79);
+            this.idComboBox.Location = new System.Drawing.Point(110, 47);
             this.idComboBox.Name = "idComboBox";
             this.idComboBox.Size = new System.Drawing.Size(121, 24);
             this.idComboBox.TabIndex = 2;
             // 
-            // nomeLabel
-            // 
-            nomeLabel.AutoSize = true;
-            nomeLabel.Location = new System.Drawing.Point(6, 112);
-            nomeLabel.Name = "nomeLabel";
-            nomeLabel.Size = new System.Drawing.Size(47, 16);
-            nomeLabel.TabIndex = 3;
-            nomeLabel.Text = "Nome:";
-            // 
             // nomeTextBox
             // 
             this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Nome", true));
-            this.nomeTextBox.Location = new System.Drawing.Point(96, 109);
+            this.nomeTextBox.Location = new System.Drawing.Point(110, 77);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(121, 22);
             this.nomeTextBox.TabIndex = 4;
@@ -136,36 +163,19 @@
             this.fotografiaPictureBox.TabIndex = 6;
             this.fotografiaPictureBox.TabStop = false;
             // 
-            // ingredientesLabel
-            // 
-            ingredientesLabel.AutoSize = true;
-            ingredientesLabel.Location = new System.Drawing.Point(6, 140);
-            ingredientesLabel.Name = "ingredientesLabel";
-            ingredientesLabel.Size = new System.Drawing.Size(84, 16);
-            ingredientesLabel.TabIndex = 7;
-            ingredientesLabel.Text = "Ingredientes:";
-            // 
             // ingredientesTextBox
             // 
             this.ingredientesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Ingredientes", true));
-            this.ingredientesTextBox.Location = new System.Drawing.Point(96, 137);
+            this.ingredientesTextBox.Location = new System.Drawing.Point(110, 105);
+            this.ingredientesTextBox.Multiline = true;
             this.ingredientesTextBox.Name = "ingredientesTextBox";
-            this.ingredientesTextBox.Size = new System.Drawing.Size(121, 22);
+            this.ingredientesTextBox.Size = new System.Drawing.Size(121, 80);
             this.ingredientesTextBox.TabIndex = 8;
-            // 
-            // precoLabel
-            // 
-            precoLabel.AutoSize = true;
-            precoLabel.Location = new System.Drawing.Point(6, 168);
-            precoLabel.Name = "precoLabel";
-            precoLabel.Size = new System.Drawing.Size(46, 16);
-            precoLabel.TabIndex = 9;
-            precoLabel.Text = "Preco:";
             // 
             // precoTextBox
             // 
             this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Preco", true));
-            this.precoTextBox.Location = new System.Drawing.Point(96, 165);
+            this.precoTextBox.Location = new System.Drawing.Point(110, 191);
             this.precoTextBox.Name = "precoTextBox";
             this.precoTextBox.Size = new System.Drawing.Size(121, 22);
             this.precoTextBox.TabIndex = 10;
@@ -181,20 +191,11 @@
             this.ativoCheckBox.Text = "Ativo";
             this.ativoCheckBox.UseVisualStyleBackColor = true;
             // 
-            // categoriaIdLabel
-            // 
-            categoriaIdLabel.AutoSize = true;
-            categoriaIdLabel.Location = new System.Drawing.Point(6, 196);
-            categoriaIdLabel.Name = "categoriaIdLabel";
-            categoriaIdLabel.Size = new System.Drawing.Size(83, 16);
-            categoriaIdLabel.TabIndex = 13;
-            categoriaIdLabel.Text = "Categoria Id:";
-            // 
             // categoriaIdComboBox
             // 
             this.categoriaIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "CategoriaId", true));
             this.categoriaIdComboBox.FormattingEnabled = true;
-            this.categoriaIdComboBox.Location = new System.Drawing.Point(96, 193);
+            this.categoriaIdComboBox.Location = new System.Drawing.Point(110, 219);
             this.categoriaIdComboBox.Name = "categoriaIdComboBox";
             this.categoriaIdComboBox.Size = new System.Drawing.Size(121, 24);
             this.categoriaIdComboBox.TabIndex = 14;
@@ -220,16 +221,16 @@
             this.groupBox1.Size = new System.Drawing.Size(401, 290);
             this.groupBox1.TabIndex = 15;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Novo Item";
             // 
-            // buttonNitem
+            // buttonDitem
             // 
-            this.buttonNitem.Location = new System.Drawing.Point(292, 64);
-            this.buttonNitem.Name = "buttonNitem";
-            this.buttonNitem.Size = new System.Drawing.Size(103, 52);
-            this.buttonNitem.TabIndex = 15;
-            this.buttonNitem.Text = "Novo Item";
-            this.buttonNitem.UseVisualStyleBackColor = true;
+            this.buttonDitem.Location = new System.Drawing.Point(292, 180);
+            this.buttonDitem.Name = "buttonDitem";
+            this.buttonDitem.Size = new System.Drawing.Size(103, 52);
+            this.buttonDitem.TabIndex = 17;
+            this.buttonDitem.Text = "Eliminar Item";
+            this.buttonDitem.UseVisualStyleBackColor = true;
             // 
             // buttonAitem
             // 
@@ -240,14 +241,14 @@
             this.buttonAitem.Text = "Guardar Alterações";
             this.buttonAitem.UseVisualStyleBackColor = true;
             // 
-            // buttonDitem
+            // buttonNitem
             // 
-            this.buttonDitem.Location = new System.Drawing.Point(292, 180);
-            this.buttonDitem.Name = "buttonDitem";
-            this.buttonDitem.Size = new System.Drawing.Size(103, 52);
-            this.buttonDitem.TabIndex = 17;
-            this.buttonDitem.Text = "Eliminar Item";
-            this.buttonDitem.UseVisualStyleBackColor = true;
+            this.buttonNitem.Location = new System.Drawing.Point(292, 64);
+            this.buttonNitem.Name = "buttonNitem";
+            this.buttonNitem.Size = new System.Drawing.Size(103, 52);
+            this.buttonNitem.TabIndex = 15;
+            this.buttonNitem.Text = "Novo Item";
+            this.buttonNitem.UseVisualStyleBackColor = true;
             // 
             // Form_Menu
             // 
