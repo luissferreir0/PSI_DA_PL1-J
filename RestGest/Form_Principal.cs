@@ -40,5 +40,11 @@ namespace RestGest
             Form_Menu fmenu = new Form_Menu();
             fmenu.Show();
         }
+
+        private void toolStripButton1_Click(object sender, EventArgs e)
+        {
+            Form_IndividualRestaurante findividualrest = new Form_IndividualRestaurante();
+            findividualrest.Show();
+        }
     }
 }

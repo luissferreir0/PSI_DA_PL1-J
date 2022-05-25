@@ -32,12 +32,13 @@
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButtonClientes = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonRestaurantes = new System.Windows.Forms.ToolStripButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.toolStripButtonPedidos = new System.Windows.Forms.ToolStripButton();
             this.toolStripButtonMenu = new System.Windows.Forms.ToolStripButton();
+            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,10 +49,11 @@
             this.toolStripButtonClientes,
             this.toolStripButtonRestaurantes,
             this.toolStripButtonPedidos,
-            this.toolStripButtonMenu});
+            this.toolStripButtonMenu,
+            this.toolStripButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(709, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(825, 25);
             this.toolStrip1.TabIndex = 0;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -74,16 +76,6 @@
             this.toolStripButtonRestaurantes.Text = "Gestão e Seleção dos Restaurantes";
             this.toolStripButtonRestaurantes.Click += new System.EventHandler(this.toolStripButtonRestaurantes_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(171, 41);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(367, 57);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Bem-Vindo ao RestGest";
-            // 
             // toolStripButtonPedidos
             // 
             this.toolStripButtonPedidos.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButtonPedidos.Image")));
@@ -102,6 +94,16 @@
             this.toolStripButtonMenu.Text = "Menu do Restaurante";
             this.toolStripButtonMenu.Click += new System.EventHandler(this.toolStripButtonMenu_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Uighur", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(237, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(367, 57);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Bem-Vindo ao RestGest";
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -115,7 +117,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(316, 233);
+            this.label3.Location = new System.Drawing.Point(392, 233);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 13);
             this.label3.TabIndex = 4;
@@ -126,20 +128,29 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Location = new System.Drawing.Point(32, 143);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(632, 21);
+            this.comboBox1.Size = new System.Drawing.Size(765, 21);
             this.comboBox1.TabIndex = 5;
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(200, 22);
+            this.toolStripButton1.Text = "Gestão Individual do Restaurante";
+            this.toolStripButton1.Click += new System.EventHandler(this.toolStripButton1_Click);
             // 
             // Form_Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(709, 333);
+            this.ClientSize = new System.Drawing.Size(825, 367);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.toolStrip1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form_Principal";
             this.Text = "Form Principal";
             this.toolStrip1.ResumeLayout(false);
@@ -160,6 +171,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
 
