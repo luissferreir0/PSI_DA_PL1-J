@@ -172,6 +172,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="DB_RestGestDataSet.xsc">
       <DependentUpon>DB_RestGestDataSet.xsd</DependentUpon>
@@ -206,6 +207,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\exportar.png" />
+    <None Include="Resources\newCliente.png" />
     <Content Include="RestGest.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>RestGest.Context.cs</LastGenOutput>
