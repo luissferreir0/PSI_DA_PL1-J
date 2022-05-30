@@ -44,7 +44,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNomeClienteNovo = new System.Windows.Forms.TextBox();
             this.buttonRemoverRestaurante = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.listBox2 = new System.Windows.Forms.ListBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -60,20 +61,21 @@
             this.groupBox1.Controls.Add(this.groupBoxListaClientes);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1571, 652);
+            this.groupBox1.Size = new System.Drawing.Size(1344, 652);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Formulário Individual de Restaurante";
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.listBox2);
             this.groupBox4.Location = new System.Drawing.Point(821, 48);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(711, 516);
+            this.groupBox4.Size = new System.Drawing.Size(493, 450);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Categorias de Menu";
+            this.groupBox4.Text = "Opção Gestão Restaurante Pedidos";
             // 
             // groupBox2
             // 
@@ -211,26 +213,34 @@
             this.buttonRemoverRestaurante.Text = "Remover";
             this.buttonRemoverRestaurante.UseVisualStyleBackColor = true;
             // 
-            // label3
+            // listBox2
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(67, 77);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(469, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "aceder a outras opções de gestão do restaurante (como o menu ou pedidos);";
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(50, 31);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(396, 356);
+            this.listBox2.TabIndex = 7;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(148, 415);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(164, 26);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Cancelar Pedidos";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // Form_IndividualRestaurante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1596, 677);
+            this.ClientSize = new System.Drawing.Size(1373, 677);
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_IndividualRestaurante";
             this.Text = "Individual de Restaurante";
             this.groupBox1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -259,6 +269,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ListBox listBox2;
     }
 }
