@@ -17,6 +17,7 @@ namespace RestGest
         public int Id { get; set; }
         public string Nome { get; set; }
         public long Telemovel { get; set; }
+        public int IdMorada { get; set; }
     
         public virtual Morada Morada { get; set; }
     }

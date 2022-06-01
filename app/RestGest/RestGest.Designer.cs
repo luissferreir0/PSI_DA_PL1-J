@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\bm395\OneDrive\Documentos\GitHub\PSI_DA_PL1-J\RestGest\RestGest.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\bm395\OneDrive\Documentos\GitHub\PSI_DA_PL1-J\app\RestGest\RestGest.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

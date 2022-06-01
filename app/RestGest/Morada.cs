@@ -14,13 +14,20 @@ namespace RestGest
     
     public partial class Morada
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Morada()
+        {
+            this.Pessoa = new HashSet<Pessoa>();
+        }
+    
         public int Id { get; set; }
         public string Rua { get; set; }
         public string Cidade { get; set; }
         public string CodPostal { get; set; }
         public string Pais { get; set; }
     
-        public virtual Pessoa Pessoa { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Pessoa> Pessoa { get; set; }
         public virtual Restaurante Restaurante { get; set; }
     }
 }
