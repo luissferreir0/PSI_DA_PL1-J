@@ -15,7 +15,7 @@ namespace RestGest
     public partial class Pagamento
     {
         public int Id { get; set; }
-        public long Valor { get; set; }
+        public decimal Valor { get; set; }
         public int MetodoPagamentoId { get; set; }
         public int PedidoId { get; set; }
     

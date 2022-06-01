@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 06/01/2022 09:48:35
+-- Date Created: 06/01/2022 10:33:43
 -- Generated from EDMX file: C:\Users\bm395\OneDrive\Documentos\GitHub\PSI_DA_PL1-J\app\RestGest\RestGest.edmx
 -- --------------------------------------------------
 
@@ -161,7 +161,7 @@ GO
 -- Creating table 'PedidoSet'
 CREATE TABLE [dbo].[PedidoSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [ValorTotal] nvarchar(max)  NOT NULL,
+    [ValorTotal] decimal(18,0)  NOT NULL,
     [ClienteId] int  NOT NULL,
     [TrabalhadorId] int  NOT NULL,
     [EstadoId] int  NOT NULL,
@@ -172,7 +172,7 @@ GO
 -- Creating table 'PagamentoSet'
 CREATE TABLE [dbo].[PagamentoSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [Valor] bigint  NOT NULL,
+    [Valor] decimal(18,0)  NOT NULL,
     [MetodoPagamentoId] int  NOT NULL,
     [PedidoId] int  NOT NULL
 );
@@ -198,7 +198,7 @@ GO
 
 -- Creating table 'PessoaSet_Trabalhador'
 CREATE TABLE [dbo].[PessoaSet_Trabalhador] (
-    [Salario] bigint  NOT NULL,
+    [Salario] decimal(18,0)  NOT NULL,
     [Posicao] nvarchar(max)  NOT NULL,
     [RestauranteId] int  NOT NULL,
     [Id] int  NOT NULL
@@ -207,7 +207,7 @@ GO
 
 -- Creating table 'PessoaSet_Cliente'
 CREATE TABLE [dbo].[PessoaSet_Cliente] (
-    [TotalGasto] nvarchar(max)  NOT NULL,
+    [TotalGasto] decimal(18,0)  NOT NULL,
     [NumContribuinte] bigint  NOT NULL,
     [Id] int  NOT NULL
 );

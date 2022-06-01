@@ -22,7 +22,7 @@ namespace RestGest
         }
     
         public int Id { get; set; }
-        public string ValorTotal { get; set; }
+        public decimal ValorTotal { get; set; }
         public int ClienteId { get; set; }
         public int TrabalhadorId { get; set; }
         public int EstadoId { get; set; }

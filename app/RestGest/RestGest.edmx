@@ -133,7 +133,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="ValorTotal" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ValorTotal" Type="decimal" Nullable="false" />
     <Property Name="ClienteId" Type="int" Nullable="false" />
     <Property Name="TrabalhadorId" Type="int" Nullable="false" />
     <Property Name="EstadoId" Type="int" Nullable="false" />
@@ -144,7 +144,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Valor" Type="bigint" Nullable="false" />
+    <Property Name="Valor" Type="decimal" Nullable="false" />
     <Property Name="MetodoPagamentoId" Type="int" Nullable="false" />
     <Property Name="PedidoId" Type="int" Nullable="false" />
   </EntityType>
@@ -170,7 +170,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Salario" Type="bigint" Nullable="false" />
+    <Property Name="Salario" Type="decimal" Nullable="false" />
     <Property Name="Posicao" Type="nvarchar(max)" Nullable="false" />
     <Property Name="RestauranteId" Type="int" Nullable="false" />
     <Property Name="Id" Type="int" Nullable="false" />
@@ -179,7 +179,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="TotalGasto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="TotalGasto" Type="decimal" Nullable="false" />
     <Property Name="NumContribuinte" Type="bigint" Nullable="false" />
     <Property Name="Id" Type="int" Nullable="false" />
   </EntityType>
@@ -469,12 +469,12 @@
           <Property Name="IdMorada" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="Cliente" BaseType="RestGest.Pessoa" >
-          <Property Name="TotalGasto" Type="String" Nullable="false" />
+          <Property Name="TotalGasto" Type="Decimal" Nullable="false" />
           <Property Name="NumContribuinte" Type="Int64" Nullable="false" />
           <NavigationProperty Name="Pedido" Relationship="RestGest.ClientePedido" FromRole="Cliente" ToRole="Pedido" />
         </EntityType>
         <EntityType Name="Trabalhador" BaseType="RestGest.Pessoa" >
-          <Property Name="Salario" Type="Int64" Nullable="false" />
+          <Property Name="Salario" Type="Decimal" Nullable="false" />
           <Property Name="Posicao" Type="String" Nullable="false" />
           <NavigationProperty Name="Restaurante" Relationship="RestGest.RestauranteTrabalhador" FromRole="Trabalhador" ToRole="Restaurante" />
           <Property Name="RestauranteId" Type="Int32" Nullable="false" />
@@ -528,7 +528,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="ValorTotal" Type="String" Nullable="false" />
+          <Property Name="ValorTotal" Type="Decimal" Nullable="false" />
           <NavigationProperty Name="Cliente" Relationship="RestGest.ClientePedido" FromRole="Pedido" ToRole="Cliente" />
           <Property Name="ClienteId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Trabalhador" Relationship="RestGest.TrabalhadorPedido" FromRole="Pedido" ToRole="Trabalhador" />
@@ -545,7 +545,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Valor" Type="Int64" Nullable="false" />
+          <Property Name="Valor" Type="Decimal" Nullable="false" />
           <NavigationProperty Name="MetodoPagamento" Relationship="RestGest.MetodoPagamentoPagamento" FromRole="Pagamento" ToRole="MetodoPagamento" />
           <Property Name="MetodoPagamentoId" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Pedido" Relationship="RestGest.PedidoPagamento" FromRole="Pagamento" ToRole="Pedido" />

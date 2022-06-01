@@ -15,12 +15,21 @@ insert into MoradaSet(Rua, Cidade, CodPostal, Pais) values ('Rua Márcia Saraiva,
 	select * from MoradaSet;
 
 /*RESTAURANTE*/
+insert into RestauranteSet(Nome, Morada_Id) values ('Don Mino', 5);
+insert into RestauranteSet(Nome, Morada_Id) values ('SubTrain', 3);
 	select * from RestauranteSet;
 
 /*PESSOA*/
+insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Derdriu', 967365705, 6);
+insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Urmazd', 934044713, 4);
+insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Kawiil', 930744609, 5);
+insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Mohana', 932712921, 2);
+insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Phoibos', 968741992, 5);
 	select * from PessoaSet;
 
 /*CLIENTE*/
+insert into PessoaSet_Cliente(TotalGasto, NumContribuinte, Id) values ('Derdriu', 967365705, 6);
+insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Urmazd', 934044713, 4);
 	select * from PessoaSet_Cliente;
 
 /*TRABALHADOR*/

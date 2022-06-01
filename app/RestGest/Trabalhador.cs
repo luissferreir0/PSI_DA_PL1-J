@@ -20,7 +20,7 @@ namespace RestGest
             this.Pedido = new HashSet<Pedido>();
         }
     
-        public long Salario { get; set; }
+        public decimal Salario { get; set; }
         public string Posicao { get; set; }
         public int RestauranteId { get; set; }
     
