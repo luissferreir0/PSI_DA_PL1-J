@@ -20,19 +20,22 @@ insert into RestauranteSet(Nome, Morada_Id) values ('SubTrain', 3);
 	select * from RestauranteSet;
 
 /*PESSOA*/
-insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Derdriu', 967365705, 6);
-insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Urmazd', 934044713, 4);
-insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Kawiil', 930744609, 5);
-insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Mohana', 932712921, 2);
-insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Phoibos', 968741992, 5);
+insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Derdriu', 967365705, 6); -- Cliente
+insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Urmazd', 934044713, 4);  -- Trabalhador
+insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Kawiil', 930744609, 5);  -- Trabalhador
+insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Mohana', 932712921, 2);  -- Cliente
+insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Phoibos', 968741992, 5); -- Trabalhador
 	select * from PessoaSet;
 
 /*CLIENTE*/
-insert into PessoaSet_Cliente(TotalGasto, NumContribuinte, Id) values ('Derdriu', 967365705, 6);
-insert into PessoaSet(Nome, Telemovel, IdMorada) values ('Urmazd', 934044713, 4);
+insert into PessoaSet_Cliente(TotalGasto, NumContribuinte, Id) values (501.25, 220479704, 1);
+insert into PessoaSet_Cliente(TotalGasto, NumContribuinte, Id) values (243.26, 111809821, 5);
 	select * from PessoaSet_Cliente;
 
 /*TRABALHADOR*/
+insert into PessoaSet_Trabalhador(Salario, Posicao, RestauranteId, Id) values (1500.6, 'Empregador de Mesa', 1, 2);
+insert into PessoaSet_Trabalhador(Salario, Posicao, RestauranteId, Id) values (1790.3, 'Cozinheiro', 1, 3);
+insert into PessoaSet_Trabalhador(Salario, Posicao, RestauranteId, Id) values (2500.5, 'Administrador', 2, 6);
 	select * from PessoaSet_Trabalhador;
 
 /*ITEM MENU*/

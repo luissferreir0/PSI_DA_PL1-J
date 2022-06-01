@@ -73,6 +73,16 @@ namespace RestGest.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap lasanha {
+            get {
+                object obj = ResourceManager.GetObject("lasanha", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap newCliente {
             get {
                 object obj = ResourceManager.GetObject("newCliente", resourceCulture);
