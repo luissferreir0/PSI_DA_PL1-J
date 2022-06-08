@@ -40,6 +40,7 @@ C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\RestGest\obj\Debug\RestG
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\RestGest\obj\Debug\RestGest.csproj.CopyComplete
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\RestGest\obj\Debug\RestGest.exe
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\RestGest\obj\Debug\RestGest.pdb
+<<<<<<< Updated upstream
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.exe.config
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.exe
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.pdb
@@ -61,3 +62,26 @@ C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.csproj.CoreCo
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.csproj.CopyComplete
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.exe
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.pdb
+=======
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.exe.config
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.exe
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.pdb
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\bin\Debug\EntityFramework.dll
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\bin\Debug\EntityFramework.xml
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.csproj.AssemblyReference.cache
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.csproj.SuggestedBindingRedirects.cache
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.Form_IndividualRestaurante.resources
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.Form_Menu.resources
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.Form_Pedidos.resources
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.Form_Principal.resources
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.Form_GestaoGlobalRestaurantes.resources
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.Form_GestaoClientes.resources
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.Properties.Resources.resources
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.csproj.GenerateResource.cache
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.csproj.CoreCompileInputs.cache
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.csproj.CopyComplete
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.exe
+C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.pdb
+>>>>>>> Stashed changes
