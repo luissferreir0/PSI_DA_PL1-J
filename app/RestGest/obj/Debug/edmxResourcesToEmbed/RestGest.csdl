@@ -10,14 +10,6 @@
     <EntitySet Name="PagamentoSet" EntityType="RestGest.Pagamento" />
     <EntitySet Name="MetodoPagamentoSet" EntityType="RestGest.MetodoPagamento" />
     <EntitySet Name="MoradaSet" EntityType="RestGest.Morada" />
-    <AssociationSet Name="PessoaMorada" Association="RestGest.PessoaMorada">
-      <End Role="Pessoa" EntitySet="PessoaSet" />
-      <End Role="Morada" EntitySet="MoradaSet" />
-    </AssociationSet>
-    <AssociationSet Name="MoradaRestaurante" Association="RestGest.MoradaRestaurante">
-      <End Role="Morada" EntitySet="MoradaSet" />
-      <End Role="Restaurante" EntitySet="RestauranteSet" />
-    </AssociationSet>
     <AssociationSet Name="RestauranteTrabalhador" Association="RestGest.RestauranteTrabalhador">
       <End Role="Restaurante" EntitySet="RestauranteSet" />
       <End Role="Trabalhador" EntitySet="PessoaSet" />
@@ -58,6 +50,14 @@
       <End EntitySet="RestauranteSet" Role="Restaurante" />
       <End EntitySet="PedidoSet" Role="Pedido" />
     </AssociationSet>
+    <AssociationSet Name="MoradaPessoa" Association="RestGest.MoradaPessoa">
+      <End Role="Morada" EntitySet="MoradaSet" />
+      <End Role="Pessoa" EntitySet="PessoaSet" />
+    </AssociationSet>
+    <AssociationSet Name="MoradaRestaurante" Association="RestGest.MoradaRestaurante">
+      <End Role="Morada" EntitySet="MoradaSet" />
+      <End Role="Restaurante" EntitySet="RestauranteSet" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Pessoa">
     <Key>
@@ -66,15 +66,16 @@
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nome" Type="String" Nullable="false" />
     <Property Name="Telemovel" Type="Int64" Nullable="false" />
-    <NavigationProperty Name="Morada" Relationship="RestGest.PessoaMorada" FromRole="Pessoa" ToRole="Morada" />
+    <NavigationProperty Name="Morada" Relationship="RestGest.MoradaPessoa" FromRole="Pessoa" ToRole="Morada" />
+    <Property Name="IdMorada" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="Cliente" BaseType="RestGest.Pessoa">
-    <Property Name="TotalGasto" Type="String" Nullable="false" />
+    <Property Name="TotalGasto" Type="Decimal" Nullable="false" />
     <Property Name="NumContribuinte" Type="Int64" Nullable="false" />
     <NavigationProperty Name="Pedido" Relationship="RestGest.ClientePedido" FromRole="Cliente" ToRole="Pedido" />
   </EntityType>
   <EntityType Name="Trabalhador" BaseType="RestGest.Pessoa">
-    <Property Name="Salario" Type="Int64" Nullable="false" />
+    <Property Name="Salario" Type="Decimal" Nullable="false" />
     <Property Name="Posicao" Type="String" Nullable="false" />
     <NavigationProperty Name="Restaurante" Relationship="RestGest.RestauranteTrabalhador" FromRole="Trabalhador" ToRole="Restaurante" />
     <Property Name="RestauranteId" Type="Int32" Nullable="false" />
@@ -86,10 +87,10 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nome" Type="String" Nullable="false" />
-    <NavigationProperty Name="Morada" Relationship="RestGest.MoradaRestaurante" FromRole="Restaurante" ToRole="Morada" />
     <NavigationProperty Name="Trabalhador" Relationship="RestGest.RestauranteTrabalhador" FromRole="Restaurante" ToRole="Trabalhador" />
     <NavigationProperty Name="ItemMenu" Relationship="RestGest.ItemMenuRestaurante" FromRole="Restaurante" ToRole="ItemMenu" />
     <NavigationProperty Name="Pedido" Relationship="RestGest.RestaurantePedido" FromRole="Restaurante" ToRole="Pedido" />
+    <NavigationProperty Name="Morada" Relationship="RestGest.MoradaRestaurante" FromRole="Restaurante" ToRole="Morada" />
   </EntityType>
   <EntityType Name="Categoria">
     <Key>
@@ -106,7 +107,7 @@
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Nome" Type="String" Nullable="false" />
-    <Property Name="Fotografia" Type="String" Nullable="false" />
+    <Property Name="Fotografia" Type="Binary" Nullable="false" />
     <Property Name="Ingredientes" Type="String" Nullable="false" />
     <Property Name="Preco" Type="Decimal" Nullable="false" />
     <Property Name="Ativo" Type="Boolean" Nullable="false" />
@@ -128,7 +129,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ValorTotal" Type="String" Nullable="false" />
+    <Property Name="ValorTotal" Type="Decimal" Nullable="false" />
     <NavigationProperty Name="Cliente" Relationship="RestGest.ClientePedido" FromRole="Pedido" ToRole="Cliente" />
     <Property Name="ClienteId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Trabalhador" Relationship="RestGest.TrabalhadorPedido" FromRole="Pedido" ToRole="Trabalhador" />
@@ -145,7 +146,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Valor" Type="Int64" Nullable="false" />
+    <Property Name="Valor" Type="Decimal" Nullable="false" />
     <NavigationProperty Name="MetodoPagamento" Relationship="RestGest.MetodoPagamentoPagamento" FromRole="Pagamento" ToRole="MetodoPagamento" />
     <Property Name="MetodoPagamentoId" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Pedido" Relationship="RestGest.PedidoPagamento" FromRole="Pagamento" ToRole="Pedido" />
@@ -169,17 +170,9 @@
     <Property Name="Cidade" Type="String" Nullable="false" />
     <Property Name="CodPostal" Type="String" Nullable="false" />
     <Property Name="Pais" Type="String" Nullable="false" />
-    <NavigationProperty Name="Pessoa" Relationship="RestGest.PessoaMorada" FromRole="Morada" ToRole="Pessoa" />
+    <NavigationProperty Name="Pessoa" Relationship="RestGest.MoradaPessoa" FromRole="Morada" ToRole="Pessoa" />
     <NavigationProperty Name="Restaurante" Relationship="RestGest.MoradaRestaurante" FromRole="Morada" ToRole="Restaurante" />
   </EntityType>
-  <Association Name="PessoaMorada">
-    <End Type="RestGest.Pessoa" Role="Pessoa" Multiplicity="1" />
-    <End Type="RestGest.Morada" Role="Morada" Multiplicity="1" />
-  </Association>
-  <Association Name="MoradaRestaurante">
-    <End Type="RestGest.Morada" Role="Morada" Multiplicity="1" />
-    <End Type="RestGest.Restaurante" Role="Restaurante" Multiplicity="1" />
-  </Association>
   <Association Name="RestauranteTrabalhador">
     <End Type="RestGest.Restaurante" Role="Restaurante" Multiplicity="1" />
     <End Type="RestGest.Trabalhador" Role="Trabalhador" Multiplicity="*" />
@@ -283,5 +276,21 @@
         <PropertyRef Name="RestauranteId" />
       </Dependent>
     </ReferentialConstraint>
+  </Association>
+  <Association Name="MoradaPessoa">
+    <End Type="RestGest.Morada" Role="Morada" Multiplicity="1" />
+    <End Type="RestGest.Pessoa" Role="Pessoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Morada">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Pessoa">
+        <PropertyRef Name="IdMorada" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MoradaRestaurante">
+    <End Type="RestGest.Morada" Role="Morada" Multiplicity="1" />
+    <End Type="RestGest.Restaurante" Role="Restaurante" Multiplicity="0..1" />
   </Association>
 </Schema>

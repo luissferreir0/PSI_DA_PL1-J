@@ -7,6 +7,7 @@
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Nome" ColumnName="Nome" />
           <ScalarProperty Name="Telemovel" ColumnName="Telemovel" />
+          <ScalarProperty Name="IdMorada" ColumnName="IdMorada" />
         </MappingFragment>
       </EntityTypeMapping>
       <EntityTypeMapping TypeName="IsTypeOf(RestGest.Trabalhador)">
@@ -105,22 +106,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <AssociationSetMapping Name="PessoaMorada" TypeName="RestGest.PessoaMorada" StoreEntitySet="PessoaSet">
-      <EndProperty Name="Morada">
-        <ScalarProperty Name="Id" ColumnName="Morada_Id" />
-      </EndProperty>
-      <EndProperty Name="Pessoa">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
-    <AssociationSetMapping Name="MoradaRestaurante" TypeName="RestGest.MoradaRestaurante" StoreEntitySet="MoradaSet">
-      <EndProperty Name="Restaurante">
-        <ScalarProperty Name="Id" ColumnName="Restaurante_Id" />
-      </EndProperty>
-      <EndProperty Name="Morada">
-        <ScalarProperty Name="Id" ColumnName="Id" />
-      </EndProperty>
-    </AssociationSetMapping>
     <AssociationSetMapping Name="ItemMenuRestaurante" TypeName="RestGest.ItemMenuRestaurante" StoreEntitySet="ItemMenuRestaurante">
       <EndProperty Name="ItemMenu">
         <ScalarProperty Name="Id" ColumnName="ItemMenu_Id" />
@@ -135,6 +120,14 @@
       </EndProperty>
       <EndProperty Name="Pedido">
         <ScalarProperty Name="Id" ColumnName="Pedido_Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="MoradaRestaurante" TypeName="RestGest.MoradaRestaurante" StoreEntitySet="RestauranteSet">
+      <EndProperty Name="Morada">
+        <ScalarProperty Name="Id" ColumnName="Morada_Id" />
+      </EndProperty>
+      <EndProperty Name="Restaurante">
+        <ScalarProperty Name="Id" ColumnName="Id" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

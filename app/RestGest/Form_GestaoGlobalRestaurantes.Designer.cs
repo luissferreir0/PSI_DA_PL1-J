@@ -52,8 +52,14 @@
             this.groupBoxListaClientes = new System.Windows.Forms.GroupBox();
             this.listBoxGlobalRestaurantes = new System.Windows.Forms.ListBox();
             this.groupBoxNovoCliente = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBoxPais = new System.Windows.Forms.TextBox();
+            this.textBoxCodPostal = new System.Windows.Forms.TextBox();
+            this.textBoxRua = new System.Windows.Forms.TextBox();
             this.buttonCriarRestaurantes = new System.Windows.Forms.Button();
-            this.textBoxNifClienteNovo = new System.Windows.Forms.TextBox();
+            this.textBoxCidade = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNomeClienteNovo = new System.Windows.Forms.TextBox();
@@ -281,7 +287,7 @@
             this.groupBoxListaClientes.Controls.Add(this.buttonRemoverRestaurante);
             this.groupBoxListaClientes.Location = new System.Drawing.Point(6, 54);
             this.groupBoxListaClientes.Name = "groupBoxListaClientes";
-            this.groupBoxListaClientes.Size = new System.Drawing.Size(385, 524);
+            this.groupBoxListaClientes.Size = new System.Drawing.Size(385, 626);
             this.groupBoxListaClientes.TabIndex = 5;
             this.groupBoxListaClientes.TabStop = false;
             this.groupBoxListaClientes.Text = "Lista Global de Restaurantes";
@@ -297,43 +303,101 @@
             // 
             // groupBoxNovoCliente
             // 
+            this.groupBoxNovoCliente.Controls.Add(this.label9);
+            this.groupBoxNovoCliente.Controls.Add(this.label5);
+            this.groupBoxNovoCliente.Controls.Add(this.label3);
+            this.groupBoxNovoCliente.Controls.Add(this.textBoxPais);
+            this.groupBoxNovoCliente.Controls.Add(this.textBoxCodPostal);
+            this.groupBoxNovoCliente.Controls.Add(this.textBoxRua);
             this.groupBoxNovoCliente.Controls.Add(this.buttonCriarRestaurantes);
-            this.groupBoxNovoCliente.Controls.Add(this.textBoxNifClienteNovo);
+            this.groupBoxNovoCliente.Controls.Add(this.textBoxCidade);
             this.groupBoxNovoCliente.Controls.Add(this.label2);
             this.groupBoxNovoCliente.Controls.Add(this.label1);
             this.groupBoxNovoCliente.Controls.Add(this.textBoxNomeClienteNovo);
             this.groupBoxNovoCliente.Location = new System.Drawing.Point(18, 368);
             this.groupBoxNovoCliente.Name = "groupBoxNovoCliente";
-            this.groupBoxNovoCliente.Size = new System.Drawing.Size(322, 150);
+            this.groupBoxNovoCliente.Size = new System.Drawing.Size(343, 252);
             this.groupBoxNovoCliente.TabIndex = 5;
             this.groupBoxNovoCliente.TabStop = false;
             this.groupBoxNovoCliente.Text = "Criar Novo Restaurante";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(18, 194);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(34, 16);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Pais";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(18, 155);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(93, 16);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Codigo-Postal";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(18, 117);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(32, 16);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Rua";
+            // 
+            // textBoxPais
+            // 
+            this.textBoxPais.Location = new System.Drawing.Point(126, 194);
+            this.textBoxPais.Multiline = true;
+            this.textBoxPais.Name = "textBoxPais";
+            this.textBoxPais.Size = new System.Drawing.Size(196, 22);
+            this.textBoxPais.TabIndex = 9;
+            // 
+            // textBoxCodPostal
+            // 
+            this.textBoxCodPostal.Location = new System.Drawing.Point(126, 155);
+            this.textBoxCodPostal.Multiline = true;
+            this.textBoxCodPostal.Name = "textBoxCodPostal";
+            this.textBoxCodPostal.Size = new System.Drawing.Size(196, 22);
+            this.textBoxCodPostal.TabIndex = 8;
+            // 
+            // textBoxRua
+            // 
+            this.textBoxRua.Location = new System.Drawing.Point(126, 111);
+            this.textBoxRua.Multiline = true;
+            this.textBoxRua.Name = "textBoxRua";
+            this.textBoxRua.Size = new System.Drawing.Size(196, 22);
+            this.textBoxRua.TabIndex = 7;
+            // 
             // buttonCriarRestaurantes
             // 
-            this.buttonCriarRestaurantes.Location = new System.Drawing.Point(169, 116);
+            this.buttonCriarRestaurantes.Location = new System.Drawing.Point(240, 220);
             this.buttonCriarRestaurantes.Name = "buttonCriarRestaurantes";
             this.buttonCriarRestaurantes.Size = new System.Drawing.Size(82, 26);
             this.buttonCriarRestaurantes.TabIndex = 5;
             this.buttonCriarRestaurantes.Text = "Criar";
             this.buttonCriarRestaurantes.UseVisualStyleBackColor = true;
+            this.buttonCriarRestaurantes.Click += new System.EventHandler(this.buttonCriarRestaurantes_Click);
             // 
-            // textBoxNifClienteNovo
+            // textBoxCidade
             // 
-            this.textBoxNifClienteNovo.Location = new System.Drawing.Point(68, 67);
-            this.textBoxNifClienteNovo.Multiline = true;
-            this.textBoxNifClienteNovo.Name = "textBoxNifClienteNovo";
-            this.textBoxNifClienteNovo.Size = new System.Drawing.Size(196, 22);
-            this.textBoxNifClienteNovo.TabIndex = 6;
+            this.textBoxCidade.Location = new System.Drawing.Point(126, 67);
+            this.textBoxCidade.Multiline = true;
+            this.textBoxCidade.Name = "textBoxCidade";
+            this.textBoxCidade.Size = new System.Drawing.Size(196, 22);
+            this.textBoxCidade.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(8, 67);
+            this.label2.Location = new System.Drawing.Point(18, 70);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 16);
+            this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 6;
-            this.label2.Text = "Morada";
+            this.label2.Text = "Cidade";
             // 
             // label1
             // 
@@ -346,7 +410,7 @@
             // 
             // textBoxNomeClienteNovo
             // 
-            this.textBoxNomeClienteNovo.Location = new System.Drawing.Point(68, 34);
+            this.textBoxNomeClienteNovo.Location = new System.Drawing.Point(126, 34);
             this.textBoxNomeClienteNovo.Multiline = true;
             this.textBoxNomeClienteNovo.Name = "textBoxNomeClienteNovo";
             this.textBoxNomeClienteNovo.Size = new System.Drawing.Size(196, 22);
@@ -360,6 +424,7 @@
             this.buttonRemoverRestaurante.TabIndex = 3;
             this.buttonRemoverRestaurante.Text = "Remover";
             this.buttonRemoverRestaurante.UseVisualStyleBackColor = true;
+            this.buttonRemoverRestaurante.Click += new System.EventHandler(this.buttonRemoverRestaurante_Click);
             // 
             // Form_GestaoGlobalRestaurantes
             // 
@@ -369,6 +434,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Form_GestaoGlobalRestaurantes";
             this.Text = "Gestão Global de Restaurantes";
+            this.Load += new System.EventHandler(this.Form_GestaoGlobalRestaurantes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBoxFichaCliente.ResumeLayout(false);
             this.groupBoxFichaCliente.PerformLayout();
@@ -412,10 +478,16 @@
         private System.Windows.Forms.ListBox listBoxGlobalRestaurantes;
         private System.Windows.Forms.GroupBox groupBoxNovoCliente;
         private System.Windows.Forms.Button buttonCriarRestaurantes;
-        private System.Windows.Forms.TextBox textBoxNifClienteNovo;
+        private System.Windows.Forms.TextBox textBoxCidade;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxNomeClienteNovo;
         private System.Windows.Forms.Button buttonRemoverRestaurante;
+        private System.Windows.Forms.TextBox textBoxPais;
+        private System.Windows.Forms.TextBox textBoxCodPostal;
+        private System.Windows.Forms.TextBox textBoxRua;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
     }
 }
