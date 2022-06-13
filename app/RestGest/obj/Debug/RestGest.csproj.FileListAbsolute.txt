@@ -40,7 +40,6 @@ C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\RestGest\obj\Debug\RestG
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\RestGest\obj\Debug\RestGest.csproj.CopyComplete
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\RestGest\obj\Debug\RestGest.exe
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\RestGest\obj\Debug\RestGest.pdb
-<<<<<<< Updated upstream
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.exe.config
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.exe
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.pdb
@@ -84,4 +83,3 @@ C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\R
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.csproj.CopyComplete
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.exe
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.pdb
->>>>>>> Stashed changes

@@ -68,11 +68,19 @@ namespace RestGest
 
             RestGest.PessoaSet.Add(cliente);
 
+            if (string.IsNullOrEmpty(textBoxNome.Text) || string.IsNullOrEmpty(textBoxTelemovel.Text) || string.IsNullOrEmpty(textBoxCP.Text) || string.IsNullOrEmpty(textBoxCidade.Text) || string.IsNullOrEmpty(textBoxPais.Text) || string.IsNullOrEmpty(textBoxRua.Text) || string.IsNullOrEmpty(textBoxContribuinte.Text))
+            {
+                return;
+            }
+            RestGest.PessoaSet.Add(cliente);
+
             RestGest.SaveChanges();
 
             LerDados();
 
         }
+
+   
 
         private void buttonAlterarDados_Click(object sender, EventArgs e) // Alterar Dados dos Clientes
         {
