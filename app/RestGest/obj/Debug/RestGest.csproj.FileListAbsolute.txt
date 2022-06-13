@@ -61,7 +61,6 @@ C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.csproj.CoreCo
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.csproj.CopyComplete
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.exe
 C:\Users\User\Desktop\PSI_DA_PL1-J\app\RestGest\obj\Debug\RestGest.pdb
-=======
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.exe.config
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.exe
 C:\Users\Diogo Gonçalves\Documents\GitHub\PSI_DA_PL1-J\app\RestGest\bin\Debug\RestGest.pdb

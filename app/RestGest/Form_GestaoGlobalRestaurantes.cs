@@ -47,9 +47,13 @@ namespace RestGest
 
             RestGest.MoradaSet.Add(restauranteMorada);
 
-            restaurante.Nome = textBoxNomeClienteNovo.Text;
+            restaurante.Nome = textBoxNomeRestauranteNovo.Text;
             restaurante.Morada = restauranteMorada;
 
+            if (string.IsNullOrEmpty(textBoxNomeRestauranteNovo.Text) || string.IsNullOrEmpty(textBoxCidade.Text) || string.IsNullOrEmpty(textBoxRua.Text) || string.IsNullOrEmpty(textBoxCodPostal.Text) || string.IsNullOrEmpty(textBoxPais.Text))
+                {
+                return;
+            }
 
             RestGest.RestauranteSet.Add(restaurante);
             RestGest.SaveChanges();
@@ -75,5 +79,51 @@ namespace RestGest
             listBoxGlobalRestaurantes.DataSource = null;
             LerDados();
         }
+
+        private void listBoxGlobalRestaurantes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Restaurante restaurante =
+                (Restaurante)listBoxGlobalRestaurantes.SelectedItem;
+            if(restaurante == null)
+            {
+                return ;
+            }
+
+                textBoxAlterarNome.Text = restaurante.Nome;
+            textBoxAlterarCidade.Text = restaurante.Morada.Cidade;
+            textBoxAlterarRua.Text = restaurante.Morada.Rua;
+            textBoxAlterarCodPostal.Text = restaurante.Morada.CodPostal;
+            textBoxAlterarPais.Text = restaurante.Morada.Pais;
+
+
+
+        
+
+        }
+
+        private void buttonAlterarDados_Click(object sender, EventArgs e)
+        {
+            Restaurante restaurante =
+                   (Restaurante)listBoxGlobalRestaurantes.SelectedItem;
+            if (restaurante == null)
+            {
+                return;
+            }
+            
+
+            var restauranteDb = RestGest
+                .RestauranteSet.Find(restaurante.Id);
+            restauranteDb.Nome = textBoxAlterarNome.Text;
+            restauranteDb.Morada.Cidade = textBoxAlterarCidade.Text;
+            restauranteDb.Morada.Rua = textBoxAlterarRua.Text;
+            restauranteDb.Morada.CodPostal = textBoxAlterarCodPostal.Text;
+            restauranteDb.Morada.Pais = textBoxAlterarPais.Text;
+          
+
+            RestGest.SaveChanges();
+            LerDados();
+
+        }
     }
+
 }

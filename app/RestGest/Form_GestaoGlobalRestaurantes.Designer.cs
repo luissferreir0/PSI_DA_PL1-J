@@ -30,11 +30,17 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBoxFichaCliente = new System.Windows.Forms.GroupBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textBoxAlterarPais = new System.Windows.Forms.TextBox();
+            this.textBoxAlterarCodPostal = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.textBoxAlterarRua = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.textBoxAlterarCidade = new System.Windows.Forms.TextBox();
+            this.textBoxAlterarNome = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.buttonAlterarDados = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.listBoxMetodosPagamentos = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
@@ -62,7 +68,7 @@
             this.textBoxCidade = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxNomeClienteNovo = new System.Windows.Forms.TextBox();
+            this.textBoxNomeRestauranteNovo = new System.Windows.Forms.TextBox();
             this.buttonRemoverRestaurante = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBoxFichaCliente.SuspendLayout();
@@ -89,17 +95,99 @@
             // 
             // groupBoxFichaCliente
             // 
-            this.groupBoxFichaCliente.Controls.Add(this.label7);
-            this.groupBoxFichaCliente.Controls.Add(this.button1);
-            this.groupBoxFichaCliente.Controls.Add(this.textBox5);
+            this.groupBoxFichaCliente.Controls.Add(this.label12);
+            this.groupBoxFichaCliente.Controls.Add(this.textBoxAlterarPais);
+            this.groupBoxFichaCliente.Controls.Add(this.textBoxAlterarCodPostal);
+            this.groupBoxFichaCliente.Controls.Add(this.label11);
+            this.groupBoxFichaCliente.Controls.Add(this.textBoxAlterarRua);
+            this.groupBoxFichaCliente.Controls.Add(this.label10);
+            this.groupBoxFichaCliente.Controls.Add(this.textBoxAlterarCidade);
+            this.groupBoxFichaCliente.Controls.Add(this.textBoxAlterarNome);
             this.groupBoxFichaCliente.Controls.Add(this.label8);
-            this.groupBoxFichaCliente.Controls.Add(this.textBox6);
+            this.groupBoxFichaCliente.Controls.Add(this.label7);
+            this.groupBoxFichaCliente.Controls.Add(this.buttonAlterarDados);
             this.groupBoxFichaCliente.Location = new System.Drawing.Point(411, 21);
             this.groupBoxFichaCliente.Name = "groupBoxFichaCliente";
-            this.groupBoxFichaCliente.Size = new System.Drawing.Size(688, 112);
+            this.groupBoxFichaCliente.Size = new System.Drawing.Size(835, 112);
             this.groupBoxFichaCliente.TabIndex = 8;
             this.groupBoxFichaCliente.TabStop = false;
             this.groupBoxFichaCliente.Text = "Ficha do Restaurante Selecionado";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(558, 33);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(34, 16);
+            this.label12.TabIndex = 20;
+            this.label12.Text = "Pais";
+            // 
+            // textBoxAlterarPais
+            // 
+            this.textBoxAlterarPais.Location = new System.Drawing.Point(608, 33);
+            this.textBoxAlterarPais.Multiline = true;
+            this.textBoxAlterarPais.Name = "textBoxAlterarPais";
+            this.textBoxAlterarPais.Size = new System.Drawing.Size(196, 22);
+            this.textBoxAlterarPais.TabIndex = 19;
+            // 
+            // textBoxAlterarCodPostal
+            // 
+            this.textBoxAlterarCodPostal.Location = new System.Drawing.Point(379, 82);
+            this.textBoxAlterarCodPostal.Multiline = true;
+            this.textBoxAlterarCodPostal.Name = "textBoxAlterarCodPostal";
+            this.textBoxAlterarCodPostal.Size = new System.Drawing.Size(196, 22);
+            this.textBoxAlterarCodPostal.TabIndex = 18;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(280, 88);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(93, 16);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Codigo-Postal";
+            // 
+            // textBoxAlterarRua
+            // 
+            this.textBoxAlterarRua.Location = new System.Drawing.Point(328, 33);
+            this.textBoxAlterarRua.Multiline = true;
+            this.textBoxAlterarRua.Name = "textBoxAlterarRua";
+            this.textBoxAlterarRua.Size = new System.Drawing.Size(196, 22);
+            this.textBoxAlterarRua.TabIndex = 16;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(290, 33);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(32, 16);
+            this.label10.TabIndex = 15;
+            this.label10.Text = "Rua";
+            // 
+            // textBoxAlterarCidade
+            // 
+            this.textBoxAlterarCidade.Location = new System.Drawing.Point(65, 85);
+            this.textBoxAlterarCidade.Multiline = true;
+            this.textBoxAlterarCidade.Name = "textBoxAlterarCidade";
+            this.textBoxAlterarCidade.Size = new System.Drawing.Size(196, 22);
+            this.textBoxAlterarCidade.TabIndex = 14;
+            // 
+            // textBoxAlterarNome
+            // 
+            this.textBoxAlterarNome.Location = new System.Drawing.Point(65, 33);
+            this.textBoxAlterarNome.Multiline = true;
+            this.textBoxAlterarNome.Name = "textBoxAlterarNome";
+            this.textBoxAlterarNome.Size = new System.Drawing.Size(196, 22);
+            this.textBoxAlterarNome.TabIndex = 13;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(8, 85);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(51, 16);
+            this.label8.TabIndex = 12;
+            this.label8.Text = "Cidade";
             // 
             // label7
             // 
@@ -110,39 +198,15 @@
             this.label7.TabIndex = 11;
             this.label7.Text = "Nome";
             // 
-            // button1
+            // buttonAlterarDados
             // 
-            this.button1.Location = new System.Drawing.Point(535, 59);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 29);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Alterar Dados";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(68, 72);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(454, 37);
-            this.textBox5.TabIndex = 9;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(8, 72);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(54, 16);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Morada";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(68, 29);
-            this.textBox6.Multiline = true;
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(454, 37);
-            this.textBox6.TabIndex = 8;
+            this.buttonAlterarDados.Location = new System.Drawing.Point(710, 77);
+            this.buttonAlterarDados.Name = "buttonAlterarDados";
+            this.buttonAlterarDados.Size = new System.Drawing.Size(119, 29);
+            this.buttonAlterarDados.TabIndex = 6;
+            this.buttonAlterarDados.Text = "Alterar Dados";
+            this.buttonAlterarDados.UseVisualStyleBackColor = true;
+            this.buttonAlterarDados.Click += new System.EventHandler(this.buttonAlterarDados_Click);
             // 
             // groupBox4
             // 
@@ -300,6 +364,7 @@
             this.listBoxGlobalRestaurantes.Name = "listBoxGlobalRestaurantes";
             this.listBoxGlobalRestaurantes.Size = new System.Drawing.Size(311, 260);
             this.listBoxGlobalRestaurantes.TabIndex = 6;
+            this.listBoxGlobalRestaurantes.SelectedIndexChanged += new System.EventHandler(this.listBoxGlobalRestaurantes_SelectedIndexChanged);
             // 
             // groupBoxNovoCliente
             // 
@@ -313,7 +378,7 @@
             this.groupBoxNovoCliente.Controls.Add(this.textBoxCidade);
             this.groupBoxNovoCliente.Controls.Add(this.label2);
             this.groupBoxNovoCliente.Controls.Add(this.label1);
-            this.groupBoxNovoCliente.Controls.Add(this.textBoxNomeClienteNovo);
+            this.groupBoxNovoCliente.Controls.Add(this.textBoxNomeRestauranteNovo);
             this.groupBoxNovoCliente.Location = new System.Drawing.Point(18, 368);
             this.groupBoxNovoCliente.Name = "groupBoxNovoCliente";
             this.groupBoxNovoCliente.Size = new System.Drawing.Size(343, 252);
@@ -408,13 +473,13 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nome";
             // 
-            // textBoxNomeClienteNovo
+            // textBoxNomeRestauranteNovo
             // 
-            this.textBoxNomeClienteNovo.Location = new System.Drawing.Point(126, 34);
-            this.textBoxNomeClienteNovo.Multiline = true;
-            this.textBoxNomeClienteNovo.Name = "textBoxNomeClienteNovo";
-            this.textBoxNomeClienteNovo.Size = new System.Drawing.Size(196, 22);
-            this.textBoxNomeClienteNovo.TabIndex = 5;
+            this.textBoxNomeRestauranteNovo.Location = new System.Drawing.Point(126, 34);
+            this.textBoxNomeRestauranteNovo.Multiline = true;
+            this.textBoxNomeRestauranteNovo.Name = "textBoxNomeRestauranteNovo";
+            this.textBoxNomeRestauranteNovo.Size = new System.Drawing.Size(196, 22);
+            this.textBoxNomeRestauranteNovo.TabIndex = 5;
             // 
             // buttonRemoverRestaurante
             // 
@@ -456,10 +521,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBoxFichaCliente;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Button buttonAlterarDados;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ListBox listBoxMetodosPagamentos;
         private System.Windows.Forms.GroupBox groupBox5;
@@ -481,7 +543,7 @@
         private System.Windows.Forms.TextBox textBoxCidade;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxNomeClienteNovo;
+        private System.Windows.Forms.TextBox textBoxNomeRestauranteNovo;
         private System.Windows.Forms.Button buttonRemoverRestaurante;
         private System.Windows.Forms.TextBox textBoxPais;
         private System.Windows.Forms.TextBox textBoxCodPostal;
@@ -489,5 +551,14 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox textBoxAlterarPais;
+        private System.Windows.Forms.TextBox textBoxAlterarCodPostal;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TextBox textBoxAlterarRua;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox textBoxAlterarCidade;
+        private System.Windows.Forms.TextBox textBoxAlterarNome;
+        private System.Windows.Forms.Label label8;
     }
 }

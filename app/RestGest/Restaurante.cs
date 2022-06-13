@@ -32,5 +32,10 @@ namespace RestGest
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedido> Pedido { get; set; }
         public virtual Morada Morada { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Nome} | {Morada.Cidade} |{Morada.Rua} |{Morada.CodPostal} |{Morada.Pais}";
+        }
     }
 }
