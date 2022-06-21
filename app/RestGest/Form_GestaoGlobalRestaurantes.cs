@@ -26,6 +26,7 @@ namespace RestGest
             RestGest = new RestGestContainer();
             LerDados();
             LerDadosCategorias();
+            LerDadosPagamentos();
         }
 
         private void LerDados()
@@ -269,6 +270,20 @@ namespace RestGest
 
             RestGest.SaveChanges();
             LerDadosPagamentos();
+        }
+
+        private void listBoxMetodosPagamentos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MetodoPagamento metodoPagamento =
+              (MetodoPagamento)listBoxMetodosPagamentos.SelectedItem;
+            if (metodoPagamento == null)
+            {
+                return;
+            }
+
+            textBoxMetodoPagamento.Text = metodoPagamento.MetodoP;
+            // comboBoxMetodoPagamentoAtivo.SelectedIndex = categoria.Ativo ? 0:1;
+
         }
     }
 

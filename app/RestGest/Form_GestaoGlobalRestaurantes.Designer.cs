@@ -245,6 +245,7 @@
             this.listBoxMetodosPagamentos.Name = "listBoxMetodosPagamentos";
             this.listBoxMetodosPagamentos.Size = new System.Drawing.Size(311, 260);
             this.listBoxMetodosPagamentos.TabIndex = 6;
+            this.listBoxMetodosPagamentos.SelectedIndexChanged += new System.EventHandler(this.listBoxMetodosPagamentos_SelectedIndexChanged);
             // 
             // groupBox5
             // 
