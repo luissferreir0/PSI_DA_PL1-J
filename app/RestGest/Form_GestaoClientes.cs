@@ -27,6 +27,7 @@ namespace RestGest
         {
             listBoxClientes.DataSource
                 = RestGest.PessoaSet.ToList();
+
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
@@ -79,14 +80,51 @@ namespace RestGest
             LerDados();
 
         }
-
-   
-
+       
         private void buttonAlterarDados_Click(object sender, EventArgs e) // Alterar Dados dos Clientes
         {
+            Cliente cliente =
+                (Cliente)listBoxClientes.SelectedItem;
+            if (cliente == null)
+            {
+                return;
+            }
+            
+           
+            var clienteDb = RestGest
+                .PessoaSet.Find(cliente.Id);
+            clienteDb.Nome = textBoxNome.Text;
+            clienteDb.Telemovel = (long)Convert.ToDouble(textBoxTelemovel.Text);
+            clienteDb.Morada.CodPostal = textBoxCP.Text;
+            clienteDb.Morada.Cidade = textBoxCidade.Text;
+            clienteDb.Morada.Pais = textBoxPais.Text;
+            clienteDb.Morada.Rua = textBoxRua.Text;
+            cliente.NumContribuinte = (long)Convert.ToDouble(textBoxContribuinte.Text);
+
+            
+
+            RestGest.SaveChanges();
+            LerDados();
 
         }
 
-    
+        private void listBoxClientes_SelectedIndexChanged(object sender, EventArgs e) //Selecionar Dados na ListBox
+        {
+            Cliente cliente =
+            (Cliente)listBoxClientes.SelectedItem;
+            if (cliente == null)
+            {
+                return;
+            }
+
+            textBoxNome.Text = cliente.Nome;
+            textBoxTelemovel.Text = cliente.Telemovel.ToString();
+            textBoxCP.Text = cliente.Morada.CodPostal;
+            textBoxCidade.Text = cliente.Morada.Cidade;
+            textBoxPais.Text = cliente.Morada.Pais;
+            textBoxRua.Text = cliente.Morada.Rua;
+            textBoxContribuinte.Text = cliente.NumContribuinte.ToString();
+
+        }
     }
 }
