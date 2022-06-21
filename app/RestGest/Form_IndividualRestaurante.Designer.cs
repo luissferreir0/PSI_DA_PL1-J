@@ -30,6 +30,8 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.listBox2 = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -44,8 +46,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNomeClienteNovo = new System.Windows.Forms.TextBox();
             this.buttonRemoverRestaurante = new System.Windows.Forms.Button();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -76,6 +76,24 @@
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Opção Gestão Restaurante Pedidos";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(148, 415);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(164, 26);
+            this.button3.TabIndex = 8;
+            this.button3.Text = "Cancelar Pedidos";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // listBox2
+            // 
+            this.listBox2.FormattingEnabled = true;
+            this.listBox2.ItemHeight = 16;
+            this.listBox2.Location = new System.Drawing.Point(50, 31);
+            this.listBox2.Name = "listBox2";
+            this.listBox2.Size = new System.Drawing.Size(396, 356);
+            this.listBox2.TabIndex = 7;
             // 
             // groupBox2
             // 
@@ -161,9 +179,9 @@
             // 
             this.listBoxTrabalhadores.FormattingEnabled = true;
             this.listBoxTrabalhadores.ItemHeight = 16;
-            this.listBoxTrabalhadores.Location = new System.Drawing.Point(29, 85);
+            this.listBoxTrabalhadores.Location = new System.Drawing.Point(6, 85);
             this.listBoxTrabalhadores.Name = "listBoxTrabalhadores";
-            this.listBoxTrabalhadores.Size = new System.Drawing.Size(311, 260);
+            this.listBoxTrabalhadores.Size = new System.Drawing.Size(373, 260);
             this.listBoxTrabalhadores.TabIndex = 6;
             // 
             // groupBoxNovoCliente
@@ -212,24 +230,6 @@
             this.buttonRemoverRestaurante.TabIndex = 3;
             this.buttonRemoverRestaurante.Text = "Remover";
             this.buttonRemoverRestaurante.UseVisualStyleBackColor = true;
-            // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.ItemHeight = 16;
-            this.listBox2.Location = new System.Drawing.Point(50, 31);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(396, 356);
-            this.listBox2.TabIndex = 7;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(148, 415);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(164, 26);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "Cancelar Pedidos";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // Form_IndividualRestaurante
             // 

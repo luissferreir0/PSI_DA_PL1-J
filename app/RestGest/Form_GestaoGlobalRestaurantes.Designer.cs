@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBoxFichaCliente = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
@@ -44,17 +45,23 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.listBoxMetodosPagamentos = new System.Windows.Forms.ListBox();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.button6 = new System.Windows.Forms.Button();
+            this.buttonAterarPagamentos = new System.Windows.Forms.Button();
+            this.comboBoxMetodoPagamentoAtivo = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.buttonMetodosPagamento = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.button7 = new System.Windows.Forms.Button();
+            this.textBoxMetodoPagamento = new System.Windows.Forms.TextBox();
+            this.buttonRemoverMetodoPagamento = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listBoxCategoriasMenu = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.comboBoxCategoriaEstado = new System.Windows.Forms.ComboBox();
+            this.buttonAlterarCategoria = new System.Windows.Forms.Button();
+            this.label13 = new System.Windows.Forms.Label();
+            this.buttonCriarCategoria = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
+            this.textBoxMenuCategoria = new System.Windows.Forms.TextBox();
+            this.buttonRemoverCategoria = new System.Windows.Forms.Button();
             this.groupBoxListaClientes = new System.Windows.Forms.GroupBox();
             this.listBoxGlobalRestaurantes = new System.Windows.Forms.ListBox();
             this.groupBoxNovoCliente = new System.Windows.Forms.GroupBox();
@@ -70,6 +77,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxNomeRestauranteNovo = new System.Windows.Forms.TextBox();
             this.buttonRemoverRestaurante = new System.Windows.Forms.Button();
+            this.dB_RestGestDataSet = new RestGest.DB_RestGestDataSet();
+            this.dBRestGestDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.estadoSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.estadoSetTableAdapter = new RestGest.DB_RestGestDataSetTableAdapters.EstadoSetTableAdapter();
+            this.fKEstadoPedidoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pedidoSetTableAdapter = new RestGest.DB_RestGestDataSetTableAdapters.PedidoSetTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBoxFichaCliente.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -78,6 +91,10 @@
             this.groupBox3.SuspendLayout();
             this.groupBoxListaClientes.SuspendLayout();
             this.groupBoxNovoCliente.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RestGestDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBRestGestDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKEstadoPedidoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -212,10 +229,10 @@
             // 
             this.groupBox4.Controls.Add(this.listBoxMetodosPagamentos);
             this.groupBox4.Controls.Add(this.groupBox5);
-            this.groupBox4.Controls.Add(this.button7);
+            this.groupBox4.Controls.Add(this.buttonRemoverMetodoPagamento);
             this.groupBox4.Location = new System.Drawing.Point(830, 154);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(385, 484);
+            this.groupBox4.Size = new System.Drawing.Size(385, 514);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Metodos de Pagamento ";
@@ -231,24 +248,55 @@
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.button6);
+            this.groupBox5.Controls.Add(this.buttonAterarPagamentos);
+            this.groupBox5.Controls.Add(this.comboBoxMetodoPagamentoAtivo);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.buttonMetodosPagamento);
             this.groupBox5.Controls.Add(this.label6);
-            this.groupBox5.Controls.Add(this.textBox4);
+            this.groupBox5.Controls.Add(this.textBoxMetodoPagamento);
             this.groupBox5.Location = new System.Drawing.Point(18, 351);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(322, 119);
+            this.groupBox5.Size = new System.Drawing.Size(322, 157);
             this.groupBox5.TabIndex = 5;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Novo Metodo de Pagamento";
             // 
-            // button6
+            // buttonAterarPagamentos
             // 
-            this.button6.Location = new System.Drawing.Point(114, 83);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(82, 26);
-            this.button6.TabIndex = 5;
-            this.button6.Text = "Criar";
-            this.button6.UseVisualStyleBackColor = true;
+            this.buttonAterarPagamentos.Location = new System.Drawing.Point(98, 125);
+            this.buttonAterarPagamentos.Name = "buttonAterarPagamentos";
+            this.buttonAterarPagamentos.Size = new System.Drawing.Size(82, 26);
+            this.buttonAterarPagamentos.TabIndex = 11;
+            this.buttonAterarPagamentos.Text = "Alterar";
+            this.buttonAterarPagamentos.UseVisualStyleBackColor = true;
+            this.buttonAterarPagamentos.Click += new System.EventHandler(this.buttonAterarPagamentos_Click);
+            // 
+            // comboBoxMetodoPagamentoAtivo
+            // 
+            this.comboBoxMetodoPagamentoAtivo.FormattingEnabled = true;
+            this.comboBoxMetodoPagamentoAtivo.Location = new System.Drawing.Point(76, 78);
+            this.comboBoxMetodoPagamentoAtivo.Name = "comboBoxMetodoPagamentoAtivo";
+            this.comboBoxMetodoPagamentoAtivo.Size = new System.Drawing.Size(196, 24);
+            this.comboBoxMetodoPagamentoAtivo.TabIndex = 10;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(25, 83);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(37, 16);
+            this.label14.TabIndex = 8;
+            this.label14.Text = "Ativo";
+            // 
+            // buttonMetodosPagamento
+            // 
+            this.buttonMetodosPagamento.Location = new System.Drawing.Point(216, 125);
+            this.buttonMetodosPagamento.Name = "buttonMetodosPagamento";
+            this.buttonMetodosPagamento.Size = new System.Drawing.Size(82, 26);
+            this.buttonMetodosPagamento.TabIndex = 5;
+            this.buttonMetodosPagamento.Text = "Criar";
+            this.buttonMetodosPagamento.UseVisualStyleBackColor = true;
+            this.buttonMetodosPagamento.Click += new System.EventHandler(this.buttonMetodosPagamento_Click);
             // 
             // label6
             // 
@@ -259,31 +307,32 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Metodo:";
             // 
-            // textBox4
+            // textBoxMetodoPagamento
             // 
-            this.textBox4.Location = new System.Drawing.Point(76, 34);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(196, 22);
-            this.textBox4.TabIndex = 5;
+            this.textBoxMetodoPagamento.Location = new System.Drawing.Point(76, 34);
+            this.textBoxMetodoPagamento.Multiline = true;
+            this.textBoxMetodoPagamento.Name = "textBoxMetodoPagamento";
+            this.textBoxMetodoPagamento.Size = new System.Drawing.Size(196, 22);
+            this.textBoxMetodoPagamento.TabIndex = 5;
             // 
-            // button7
+            // buttonRemoverMetodoPagamento
             // 
-            this.button7.Location = new System.Drawing.Point(116, 33);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(147, 29);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "Remover";
-            this.button7.UseVisualStyleBackColor = true;
+            this.buttonRemoverMetodoPagamento.Location = new System.Drawing.Point(116, 33);
+            this.buttonRemoverMetodoPagamento.Name = "buttonRemoverMetodoPagamento";
+            this.buttonRemoverMetodoPagamento.Size = new System.Drawing.Size(147, 29);
+            this.buttonRemoverMetodoPagamento.TabIndex = 3;
+            this.buttonRemoverMetodoPagamento.Text = "Remover";
+            this.buttonRemoverMetodoPagamento.UseVisualStyleBackColor = true;
+            this.buttonRemoverMetodoPagamento.Click += new System.EventHandler(this.buttonRemoverMetodoPagamento_Click);
             // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.listBoxCategoriasMenu);
             this.groupBox2.Controls.Add(this.groupBox3);
-            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Controls.Add(this.buttonRemoverCategoria);
             this.groupBox2.Location = new System.Drawing.Point(411, 154);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(385, 484);
+            this.groupBox2.Size = new System.Drawing.Size(385, 520);
             this.groupBox2.TabIndex = 6;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Categorias de Menu";
@@ -296,27 +345,59 @@
             this.listBoxCategoriasMenu.Name = "listBoxCategoriasMenu";
             this.listBoxCategoriasMenu.Size = new System.Drawing.Size(311, 260);
             this.listBoxCategoriasMenu.TabIndex = 6;
+            this.listBoxCategoriasMenu.SelectedIndexChanged += new System.EventHandler(this.listBoxCategoriasMenu_SelectedIndexChanged);
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.button3);
+            this.groupBox3.Controls.Add(this.comboBoxCategoriaEstado);
+            this.groupBox3.Controls.Add(this.buttonAlterarCategoria);
+            this.groupBox3.Controls.Add(this.label13);
+            this.groupBox3.Controls.Add(this.buttonCriarCategoria);
             this.groupBox3.Controls.Add(this.label4);
-            this.groupBox3.Controls.Add(this.textBox2);
+            this.groupBox3.Controls.Add(this.textBoxMenuCategoria);
             this.groupBox3.Location = new System.Drawing.Point(18, 351);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(322, 119);
+            this.groupBox3.Size = new System.Drawing.Size(322, 163);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Criar Categoria Menu";
             // 
-            // button3
+            // comboBoxCategoriaEstado
             // 
-            this.button3.Location = new System.Drawing.Point(118, 72);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(82, 26);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Criar";
-            this.button3.UseVisualStyleBackColor = true;
+            this.comboBoxCategoriaEstado.FormattingEnabled = true;
+            this.comboBoxCategoriaEstado.Location = new System.Drawing.Point(68, 83);
+            this.comboBoxCategoriaEstado.Name = "comboBoxCategoriaEstado";
+            this.comboBoxCategoriaEstado.Size = new System.Drawing.Size(196, 24);
+            this.comboBoxCategoriaEstado.TabIndex = 9;
+            // 
+            // buttonAlterarCategoria
+            // 
+            this.buttonAlterarCategoria.Location = new System.Drawing.Point(81, 131);
+            this.buttonAlterarCategoria.Name = "buttonAlterarCategoria";
+            this.buttonAlterarCategoria.Size = new System.Drawing.Size(82, 26);
+            this.buttonAlterarCategoria.TabIndex = 8;
+            this.buttonAlterarCategoria.Text = "Alterar";
+            this.buttonAlterarCategoria.UseVisualStyleBackColor = true;
+            this.buttonAlterarCategoria.Click += new System.EventHandler(this.buttonAlterarCategoria_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(8, 78);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(37, 16);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Ativo";
+            // 
+            // buttonCriarCategoria
+            // 
+            this.buttonCriarCategoria.Location = new System.Drawing.Point(203, 131);
+            this.buttonCriarCategoria.Name = "buttonCriarCategoria";
+            this.buttonCriarCategoria.Size = new System.Drawing.Size(82, 26);
+            this.buttonCriarCategoria.TabIndex = 5;
+            this.buttonCriarCategoria.Text = "Criar";
+            this.buttonCriarCategoria.UseVisualStyleBackColor = true;
+            this.buttonCriarCategoria.Click += new System.EventHandler(this.buttonCriarCategoria_Click);
             // 
             // label4
             // 
@@ -327,22 +408,23 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Menu";
             // 
-            // textBox2
+            // textBoxMenuCategoria
             // 
-            this.textBox2.Location = new System.Drawing.Point(68, 34);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(196, 22);
-            this.textBox2.TabIndex = 5;
+            this.textBoxMenuCategoria.Location = new System.Drawing.Point(68, 34);
+            this.textBoxMenuCategoria.Multiline = true;
+            this.textBoxMenuCategoria.Name = "textBoxMenuCategoria";
+            this.textBoxMenuCategoria.Size = new System.Drawing.Size(196, 22);
+            this.textBoxMenuCategoria.TabIndex = 5;
             // 
-            // button4
+            // buttonRemoverCategoria
             // 
-            this.button4.Location = new System.Drawing.Point(111, 33);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(147, 29);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Remover";
-            this.button4.UseVisualStyleBackColor = true;
+            this.buttonRemoverCategoria.Location = new System.Drawing.Point(111, 33);
+            this.buttonRemoverCategoria.Name = "buttonRemoverCategoria";
+            this.buttonRemoverCategoria.Size = new System.Drawing.Size(147, 29);
+            this.buttonRemoverCategoria.TabIndex = 3;
+            this.buttonRemoverCategoria.Text = "Remover";
+            this.buttonRemoverCategoria.UseVisualStyleBackColor = true;
+            this.buttonRemoverCategoria.Click += new System.EventHandler(this.buttonRemoverCategoria_Click);
             // 
             // groupBoxListaClientes
             // 
@@ -491,6 +573,34 @@
             this.buttonRemoverRestaurante.UseVisualStyleBackColor = true;
             this.buttonRemoverRestaurante.Click += new System.EventHandler(this.buttonRemoverRestaurante_Click);
             // 
+            // dB_RestGestDataSet
+            // 
+            this.dB_RestGestDataSet.DataSetName = "DB_RestGestDataSet";
+            this.dB_RestGestDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dBRestGestDataSetBindingSource
+            // 
+            this.dBRestGestDataSetBindingSource.DataSource = this.dB_RestGestDataSet;
+            this.dBRestGestDataSetBindingSource.Position = 0;
+            // 
+            // estadoSetBindingSource
+            // 
+            this.estadoSetBindingSource.DataMember = "EstadoSet";
+            this.estadoSetBindingSource.DataSource = this.dBRestGestDataSetBindingSource;
+            // 
+            // estadoSetTableAdapter
+            // 
+            this.estadoSetTableAdapter.ClearBeforeFill = true;
+            // 
+            // fKEstadoPedidoBindingSource
+            // 
+            this.fKEstadoPedidoBindingSource.DataMember = "FK_EstadoPedido";
+            this.fKEstadoPedidoBindingSource.DataSource = this.estadoSetBindingSource;
+            // 
+            // pedidoSetTableAdapter
+            // 
+            this.pedidoSetTableAdapter.ClearBeforeFill = true;
+            // 
             // Form_GestaoGlobalRestaurantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -512,6 +622,10 @@
             this.groupBoxListaClientes.ResumeLayout(false);
             this.groupBoxNovoCliente.ResumeLayout(false);
             this.groupBoxNovoCliente.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dB_RestGestDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dBRestGestDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.estadoSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKEstadoPedidoBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -525,17 +639,17 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ListBox listBoxMetodosPagamentos;
         private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button buttonMetodosPagamento;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.TextBox textBoxMetodoPagamento;
+        private System.Windows.Forms.Button buttonRemoverMetodoPagamento;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox listBoxCategoriasMenu;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buttonCriarCategoria;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.TextBox textBoxMenuCategoria;
+        private System.Windows.Forms.Button buttonRemoverCategoria;
         private System.Windows.Forms.GroupBox groupBoxListaClientes;
         private System.Windows.Forms.ListBox listBoxGlobalRestaurantes;
         private System.Windows.Forms.GroupBox groupBoxNovoCliente;
@@ -560,5 +674,17 @@
         private System.Windows.Forms.TextBox textBoxAlterarCidade;
         private System.Windows.Forms.TextBox textBoxAlterarNome;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button buttonAlterarCategoria;
+        private System.Windows.Forms.BindingSource dBRestGestDataSetBindingSource;
+        private DB_RestGestDataSet dB_RestGestDataSet;
+        private System.Windows.Forms.BindingSource estadoSetBindingSource;
+        private DB_RestGestDataSetTableAdapters.EstadoSetTableAdapter estadoSetTableAdapter;
+        private System.Windows.Forms.BindingSource fKEstadoPedidoBindingSource;
+        private DB_RestGestDataSetTableAdapters.PedidoSetTableAdapter pedidoSetTableAdapter;
+        private System.Windows.Forms.ComboBox comboBoxCategoriaEstado;
+        private System.Windows.Forms.Button buttonAterarPagamentos;
+        private System.Windows.Forms.ComboBox comboBoxMetodoPagamentoAtivo;
+        private System.Windows.Forms.Label label14;
     }
 }
