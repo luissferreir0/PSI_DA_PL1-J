@@ -102,9 +102,6 @@ namespace RestGest
             textBoxAlterarPais.Text = restaurante.Morada.Pais;
 
 
-
-        
-
         }
 
         private void buttonAlterarDados_Click(object sender, EventArgs e)
@@ -247,7 +244,7 @@ namespace RestGest
             //Guardar alteraçoes na base de dados
             RestGest.SaveChanges();
             // Atualizar Dados de Categoria existentes
-            listBoxCategoriasMenu.DataSource = null;
+            listBoxMetodosPagamentos.DataSource = null;
             LerDadosPagamentos();
         }
 
