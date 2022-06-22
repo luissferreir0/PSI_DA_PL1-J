@@ -35,22 +35,21 @@
             System.Windows.Forms.Label valorTotalLabel1;
             System.Windows.Forms.Label restauranteIdLabel;
             this.dB_RestGestDataSet = new RestGest.DB_RestGestDataSet();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonApedido = new System.Windows.Forms.Button();
-            this.valorTotalTextBox = new System.Windows.Forms.TextBox();
-            this.restauranteIdComboBox = new System.Windows.Forms.ComboBox();
+            this.listBoxPedido = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.estadoIdcomboBox = new System.Windows.Forms.ComboBox();
+            this.buttonApedido = new System.Windows.Forms.Button();
             this.buttonNpedido = new System.Windows.Forms.Button();
+            this.valorTotalTextBox = new System.Windows.Forms.TextBox();
             this.trabalhadorIdComboBox = new System.Windows.Forms.ComboBox();
             this.clienteIdComboBox = new System.Windows.Forms.ComboBox();
+            this.restauranteIdComboBox = new System.Windows.Forms.ComboBox();
             this.metodoPComboBox = new System.Windows.Forms.ComboBox();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripDropDownButton1 = new System.Windows.Forms.ToolStripDropDownButton();
             this.tXTToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pDFToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.listBox1 = new System.Windows.Forms.ListBox();
-            this.estadoIdcomboBox = new System.Windows.Forms.ComboBox();
             metodoPLabel = new System.Windows.Forms.Label();
             clienteIdLabel = new System.Windows.Forms.Label();
             trabalhadorIdLabel = new System.Windows.Forms.Label();
@@ -58,7 +57,6 @@
             valorTotalLabel1 = new System.Windows.Forms.Label();
             restauranteIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dB_RestGestDataSet)).BeginInit();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -122,40 +120,14 @@
             this.dB_RestGestDataSet.DataSetName = "DB_RestGestDataSet";
             this.dB_RestGestDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // groupBox1
+            // listBoxPedido
             // 
-            this.groupBox1.Controls.Add(this.listBox1);
-            this.groupBox1.Controls.Add(this.groupBox2);
-            this.groupBox1.Location = new System.Drawing.Point(12, 53);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1216, 342);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            // 
-            // buttonApedido
-            // 
-            this.buttonApedido.Location = new System.Drawing.Point(358, 146);
-            this.buttonApedido.Name = "buttonApedido";
-            this.buttonApedido.Size = new System.Drawing.Size(155, 55);
-            this.buttonApedido.TabIndex = 14;
-            this.buttonApedido.Text = "Guardar Altrações";
-            this.buttonApedido.UseVisualStyleBackColor = true;
-            this.buttonApedido.Click += new System.EventHandler(this.buttonApedido_Click);
-            // 
-            // valorTotalTextBox
-            // 
-            this.valorTotalTextBox.Location = new System.Drawing.Point(89, 66);
-            this.valorTotalTextBox.Name = "valorTotalTextBox";
-            this.valorTotalTextBox.Size = new System.Drawing.Size(193, 22);
-            this.valorTotalTextBox.TabIndex = 3;
-            // 
-            // restauranteIdComboBox
-            // 
-            this.restauranteIdComboBox.FormattingEnabled = true;
-            this.restauranteIdComboBox.Location = new System.Drawing.Point(110, 212);
-            this.restauranteIdComboBox.Name = "restauranteIdComboBox";
-            this.restauranteIdComboBox.Size = new System.Drawing.Size(172, 24);
-            this.restauranteIdComboBox.TabIndex = 11;
+            this.listBoxPedido.FormattingEnabled = true;
+            this.listBoxPedido.ItemHeight = 16;
+            this.listBoxPedido.Location = new System.Drawing.Point(473, 46);
+            this.listBoxPedido.Name = "listBoxPedido";
+            this.listBoxPedido.Size = new System.Drawing.Size(484, 292);
+            this.listBoxPedido.TabIndex = 1;
             // 
             // groupBox2
             // 
@@ -173,44 +145,77 @@
             this.groupBox2.Controls.Add(this.restauranteIdComboBox);
             this.groupBox2.Controls.Add(metodoPLabel);
             this.groupBox2.Controls.Add(this.metodoPComboBox);
-            this.groupBox2.Location = new System.Drawing.Point(6, 21);
+            this.groupBox2.Location = new System.Drawing.Point(12, 42);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(551, 296);
+            this.groupBox2.Size = new System.Drawing.Size(455, 296);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Novo Pedido";
             // 
+            // estadoIdcomboBox
+            // 
+            this.estadoIdcomboBox.FormattingEnabled = true;
+            this.estadoIdcomboBox.Location = new System.Drawing.Point(112, 122);
+            this.estadoIdcomboBox.Name = "estadoIdcomboBox";
+            this.estadoIdcomboBox.Size = new System.Drawing.Size(172, 24);
+            this.estadoIdcomboBox.TabIndex = 15;
+            // 
+            // buttonApedido
+            // 
+            this.buttonApedido.Location = new System.Drawing.Point(290, 146);
+            this.buttonApedido.Name = "buttonApedido";
+            this.buttonApedido.Size = new System.Drawing.Size(155, 55);
+            this.buttonApedido.TabIndex = 14;
+            this.buttonApedido.Text = "Guardar Altrações";
+            this.buttonApedido.UseVisualStyleBackColor = true;
+            this.buttonApedido.Click += new System.EventHandler(this.buttonApedido_Click);
+            // 
             // buttonNpedido
             // 
-            this.buttonNpedido.Location = new System.Drawing.Point(358, 78);
+            this.buttonNpedido.Location = new System.Drawing.Point(290, 69);
             this.buttonNpedido.Name = "buttonNpedido";
             this.buttonNpedido.Size = new System.Drawing.Size(155, 55);
             this.buttonNpedido.TabIndex = 13;
             this.buttonNpedido.Text = "Novo Pedido";
             this.buttonNpedido.UseVisualStyleBackColor = true;
             // 
+            // valorTotalTextBox
+            // 
+            this.valorTotalTextBox.Location = new System.Drawing.Point(112, 63);
+            this.valorTotalTextBox.Name = "valorTotalTextBox";
+            this.valorTotalTextBox.Size = new System.Drawing.Size(170, 22);
+            this.valorTotalTextBox.TabIndex = 3;
+            // 
             // trabalhadorIdComboBox
             // 
             this.trabalhadorIdComboBox.FormattingEnabled = true;
             this.trabalhadorIdComboBox.Location = new System.Drawing.Point(112, 182);
             this.trabalhadorIdComboBox.Name = "trabalhadorIdComboBox";
-            this.trabalhadorIdComboBox.Size = new System.Drawing.Size(170, 24);
+            this.trabalhadorIdComboBox.Size = new System.Drawing.Size(172, 24);
             this.trabalhadorIdComboBox.TabIndex = 9;
             // 
             // clienteIdComboBox
             // 
             this.clienteIdComboBox.FormattingEnabled = true;
-            this.clienteIdComboBox.Location = new System.Drawing.Point(78, 152);
+            this.clienteIdComboBox.Location = new System.Drawing.Point(112, 152);
             this.clienteIdComboBox.Name = "clienteIdComboBox";
-            this.clienteIdComboBox.Size = new System.Drawing.Size(204, 24);
+            this.clienteIdComboBox.Size = new System.Drawing.Size(172, 24);
             this.clienteIdComboBox.TabIndex = 7;
+            // 
+            // restauranteIdComboBox
+            // 
+            this.restauranteIdComboBox.FormattingEnabled = true;
+            this.restauranteIdComboBox.Location = new System.Drawing.Point(112, 212);
+            this.restauranteIdComboBox.Name = "restauranteIdComboBox";
+            this.restauranteIdComboBox.Size = new System.Drawing.Size(172, 24);
+            this.restauranteIdComboBox.TabIndex = 11;
             // 
             // metodoPComboBox
             // 
             this.metodoPComboBox.FormattingEnabled = true;
-            this.metodoPComboBox.Location = new System.Drawing.Point(93, 94);
+            this.metodoPComboBox.Location = new System.Drawing.Point(112, 94);
             this.metodoPComboBox.Name = "metodoPComboBox";
-            this.metodoPComboBox.Size = new System.Drawing.Size(189, 24);
+            this.metodoPComboBox.Size = new System.Drawing.Size(172, 24);
             this.metodoPComboBox.TabIndex = 3;
             // 
             // toolStrip1
@@ -221,7 +226,7 @@
             this.toolStripDropDownButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1254, 27);
+            this.toolStrip1.Size = new System.Drawing.Size(969, 27);
             this.toolStrip1.TabIndex = 4;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -257,35 +262,18 @@
             this.pDFToolStripMenuItem.Size = new System.Drawing.Size(118, 26);
             this.pDFToolStripMenuItem.Text = "PDF";
             // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(563, 25);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(627, 292);
-            this.listBox1.TabIndex = 1;
-            // 
-            // estadoIdcomboBox
-            // 
-            this.estadoIdcomboBox.FormattingEnabled = true;
-            this.estadoIdcomboBox.Location = new System.Drawing.Point(93, 124);
-            this.estadoIdcomboBox.Name = "estadoIdcomboBox";
-            this.estadoIdcomboBox.Size = new System.Drawing.Size(189, 24);
-            this.estadoIdcomboBox.TabIndex = 15;
-            // 
             // Form_Pedidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1254, 407);
+            this.ClientSize = new System.Drawing.Size(969, 362);
+            this.Controls.Add(this.listBoxPedido);
             this.Controls.Add(this.toolStrip1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBox2);
             this.Name = "Form_Pedidos";
             this.Text = "Pedidos";
             this.Load += new System.EventHandler(this.Form_Pedidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dB_RestGestDataSet)).EndInit();
-            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
@@ -297,7 +285,6 @@
 
         #endregion
         private DB_RestGestDataSet dB_RestGestDataSet;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox trabalhadorIdComboBox;
         private System.Windows.Forms.ComboBox clienteIdComboBox;
@@ -311,7 +298,7 @@
         private System.Windows.Forms.ToolStripDropDownButton toolStripDropDownButton1;
         private System.Windows.Forms.ToolStripMenuItem tXTToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pDFToolStripMenuItem;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxPedido;
         private System.Windows.Forms.ComboBox estadoIdcomboBox;
     }
 }

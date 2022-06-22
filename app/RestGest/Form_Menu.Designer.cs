@@ -202,7 +202,6 @@
             this.listBoxMenu.Name = "listBoxMenu";
             this.listBoxMenu.Size = new System.Drawing.Size(958, 228);
             this.listBoxMenu.TabIndex = 16;
-            this.listBoxMenu.SelectedIndexChanged += new System.EventHandler(this.listBoxMenu_SelectedIndexChanged);
             // 
             // photo
             // 

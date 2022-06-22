@@ -103,9 +103,9 @@ namespace RestGest
 
         private void buttonNitem_Click(object sender, EventArgs e)
         {
-            if (nomeTextBox.Text != " " && categoriaIdComboBox.SelectedIndex >= 0)
+            try
             {
-                //Criar novo Menu
+
                 ItemMenu menu = new ItemMenu();
                 menu.Nome = nomeTextBox.Text;
                 menu.Ingredientes = ingredientesTextBox.Text;
@@ -115,7 +115,7 @@ namespace RestGest
                 
                 bool ativo;
 
-                if (ativoCheckBox.Checked == true)
+                if (ativoCheckBox.Checked)
                 {
                     ativo = true;
                 }
@@ -126,16 +126,14 @@ namespace RestGest
 
                 menu.Ativo = ativo;
 
-
                 RestGest.ItemMenuSet.Add(menu);
                 RestGest.SaveChanges();
                 LerDados();
 
-
             }
-            else
+            catch
             {
-                MessageBox.Show("Não foi possivel criar os dados!!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("É necessário preencher todos os dados!!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 

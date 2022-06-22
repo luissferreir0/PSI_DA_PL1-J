@@ -45,6 +45,8 @@ insert into PessoaSet_Trabalhador(Salario, Posicao, RestauranteId, Id) values (2
 	select * from ItemMenuRestaurante;
 	
 /*ESTADO PEDIDO*/
+insert into EstadoSet(NomeEstado) values ('Em Andamento');
+insert into EstadoSet(NomeEstado) values ('Terminado');
 	select * from EstadoSet;
 
 /*ITEM PEDIDO*/
@@ -57,4 +59,5 @@ insert into PessoaSet_Trabalhador(Salario, Posicao, RestauranteId, Id) values (2
 	select * from PagamentoSet;
 	
 /*PEDIDO*/	
+insert into PedidoSet(ValorTotal, ClienteId, TrabalhadorId, EstadoId, RestauranteId) values (100, 1, 2, 1, 1);
 	select * from PedidoSet;

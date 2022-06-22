@@ -21,13 +21,17 @@ namespace RestGest
 
         private void Form_Pedidos_Load(object sender, EventArgs e)
         {
-            InitializeComponent();
+            RestGest = new RestGestContainer();
+            LerDados();
         }
 
         private void LerDados()
         {
-            listBox1.DataSource
+            listBoxPedido.DataSource
                 = RestGest.PedidoSet.ToList();
+
+            estadoIdcomboBox.DataSource
+                = RestGest.EstadoSet.ToList();
 
             clienteIdComboBox.DataSource
                 = RestGest.PessoaSet.ToList();
@@ -36,7 +40,7 @@ namespace RestGest
                 = RestGest.PessoaSet.ToList();
 
             restauranteIdComboBox.DataSource
-                = RestGest.PessoaSet.ToList();
+                = RestGest.RestauranteSet.ToList();
 
             metodoPComboBox.DataSource
                 = RestGest.MetodoPagamentoSet.ToList();
@@ -55,15 +59,14 @@ namespace RestGest
 
         private void buttonNpedido_Click(object sender, EventArgs e)
         {
-            try
-             {
+            
                  Pedido pedido = new Pedido();
 
                  pedido.ValorTotal = (long)Convert.ToDouble(valorTotalTextBox.Text);
-                 pedido.ClienteId = clienteIdComboBox.SelectedIndex + 1;
-                 pedido.TrabalhadorId = trabalhadorIdComboBox.SelectedIndex + 1;
-                 pedido.EstadoId = estadoIdcomboBox.SelectedIndex + 1;
-                 pedido.RestauranteId = restauranteIdComboBox.SelectedIndex + 1;
+                 pedido.ClienteId = clienteIdComboBox.SelectedIndex;
+                 pedido.TrabalhadorId = trabalhadorIdComboBox.SelectedIndex;
+                 pedido.EstadoId = estadoIdcomboBox.SelectedIndex;
+                 pedido.RestauranteId = restauranteIdComboBox.SelectedIndex;
 
                  RestGest.PedidoSet.Add(pedido);
 
@@ -75,11 +78,6 @@ namespace RestGest
 
                  RestGest.SaveChanges();
                  LerDados();
-             }
-             catch
-             {
-                 MessageBox.Show("É necessário preencher todos os dados!!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-             }
         }
 
         private void buttonApedido_Click(object sender, EventArgs e)
@@ -87,19 +85,18 @@ namespace RestGest
             try
             {
                 Pedido pedido =
-                    (Pedido)listBox1.SelectedItem;
+                    (Pedido)listBoxPedido.SelectedItem;
                 if (pedido == null)
                 {
                     return;
                 }
 
-                var pedidoDb = RestGest
-                    .PedidoSet.Find(pedido.Id);
+                var pedidoDb = RestGest.PedidoSet.Find(pedido.Id);
                 pedidoDb.ValorTotal = (long)Convert.ToDouble(valorTotalTextBox.Text);
-                pedidoDb.ClienteId = clienteIdComboBox.SelectedIndex + 1;
-                pedidoDb.TrabalhadorId = trabalhadorIdComboBox.SelectedIndex + 1;
-                pedidoDb.EstadoId = estadoIdcomboBox.SelectedIndex + 1;
-                pedidoDb.RestauranteId = restauranteIdComboBox.SelectedIndex + 1;
+                pedidoDb.ClienteId = clienteIdComboBox.SelectedIndex;
+                pedidoDb.TrabalhadorId = trabalhadorIdComboBox.SelectedIndex;
+                pedidoDb.EstadoId = estadoIdcomboBox.SelectedIndex;
+                pedidoDb.RestauranteId = restauranteIdComboBox.SelectedIndex;
 
                 RestGest.SaveChanges();
                 LerDados();
