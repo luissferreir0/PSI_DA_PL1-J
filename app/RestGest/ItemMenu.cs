@@ -34,5 +34,10 @@ namespace RestGest
         public virtual Categoria Categoria { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedido> Pedido { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Nome} | {Ingredientes} | {Preco} | {Categoria.Ativo} ";
+        }
     }
 }

@@ -36,5 +36,11 @@ namespace RestGest
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ItemMenu> ItemMenu { get; set; }
         public virtual Restaurante Restaurante { get; set; }
+
+        public override string ToString()
+        {
+            return $"{ValorTotal} | {Cliente.Nome} | {Trabalhador.Nome} |" +
+                $" {Estado.NomeEstado} | {Restaurante.Nome}";
+        }
     }
 }

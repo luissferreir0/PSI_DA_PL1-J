@@ -28,17 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label idLabel;
             System.Windows.Forms.Label nomeLabel;
             System.Windows.Forms.Label ingredientesLabel;
             System.Windows.Forms.Label precoLabel;
             System.Windows.Forms.Label categoriaIdLabel;
             this.dB_RestGestDataSet = new RestGest.DB_RestGestDataSet();
-            this.itemMenuSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itemMenuSetTableAdapter = new RestGest.DB_RestGestDataSetTableAdapters.ItemMenuSetTableAdapter();
-            this.tableAdapterManager = new RestGest.DB_RestGestDataSetTableAdapters.TableAdapterManager();
-            this.idComboBox = new System.Windows.Forms.ComboBox();
             this.nomeTextBox = new System.Windows.Forms.TextBox();
             this.fotografiaPictureBox = new System.Windows.Forms.PictureBox();
             this.ingredientesTextBox = new System.Windows.Forms.TextBox();
@@ -46,28 +40,19 @@
             this.ativoCheckBox = new System.Windows.Forms.CheckBox();
             this.categoriaIdComboBox = new System.Windows.Forms.ComboBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.buttonDitem = new System.Windows.Forms.Button();
+            this.photobutton = new System.Windows.Forms.Button();
             this.buttonAitem = new System.Windows.Forms.Button();
             this.buttonNitem = new System.Windows.Forms.Button();
-            idLabel = new System.Windows.Forms.Label();
+            this.listBoxMenu = new System.Windows.Forms.ListBox();
+            this.photo = new System.Windows.Forms.OpenFileDialog();
             nomeLabel = new System.Windows.Forms.Label();
             ingredientesLabel = new System.Windows.Forms.Label();
             precoLabel = new System.Windows.Forms.Label();
             categoriaIdLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dB_RestGestDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotografiaPictureBox)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // idLabel
-            // 
-            idLabel.AutoSize = true;
-            idLabel.Location = new System.Drawing.Point(83, 50);
-            idLabel.Name = "idLabel";
-            idLabel.Size = new System.Drawing.Size(21, 16);
-            idLabel.TabIndex = 1;
-            idLabel.Text = "Id:";
             // 
             // nomeLabel
             // 
@@ -110,45 +95,8 @@
             this.dB_RestGestDataSet.DataSetName = "DB_RestGestDataSet";
             this.dB_RestGestDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // itemMenuSetBindingSource
-            // 
-            this.itemMenuSetBindingSource.DataMember = "ItemMenuSet";
-            this.itemMenuSetBindingSource.DataSource = this.dB_RestGestDataSet;
-            // 
-            // itemMenuSetTableAdapter
-            // 
-            this.itemMenuSetTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.CategoriaSetTableAdapter = null;
-            this.tableAdapterManager.EstadoSetTableAdapter = null;
-            this.tableAdapterManager.ItemMenuPedidoTableAdapter = null;
-            this.tableAdapterManager.ItemMenuRestauranteTableAdapter = null;
-            this.tableAdapterManager.ItemMenuSetTableAdapter = this.itemMenuSetTableAdapter;
-            this.tableAdapterManager.MetodoPagamentoSetTableAdapter = null;
-            this.tableAdapterManager.MoradaSetTableAdapter = null;
-            this.tableAdapterManager.PagamentoSetTableAdapter = null;
-            this.tableAdapterManager.PedidoSetTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_ClienteTableAdapter = null;
-            this.tableAdapterManager.PessoaSet_TrabalhadorTableAdapter = null;
-            this.tableAdapterManager.PessoaSetTableAdapter = null;
-            this.tableAdapterManager.RestauranteSetTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = RestGest.DB_RestGestDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // idComboBox
-            // 
-            this.idComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Id", true));
-            this.idComboBox.FormattingEnabled = true;
-            this.idComboBox.Location = new System.Drawing.Point(110, 47);
-            this.idComboBox.Name = "idComboBox";
-            this.idComboBox.Size = new System.Drawing.Size(121, 24);
-            this.idComboBox.TabIndex = 2;
-            // 
             // nomeTextBox
             // 
-            this.nomeTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Nome", true));
             this.nomeTextBox.Location = new System.Drawing.Point(110, 77);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(121, 22);
@@ -156,7 +104,6 @@
             // 
             // fotografiaPictureBox
             // 
-            this.fotografiaPictureBox.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.itemMenuSetBindingSource, "Fotografia", true));
             this.fotografiaPictureBox.Location = new System.Drawing.Point(419, 12);
             this.fotografiaPictureBox.Name = "fotografiaPictureBox";
             this.fotografiaPictureBox.Size = new System.Drawing.Size(551, 290);
@@ -165,7 +112,6 @@
             // 
             // ingredientesTextBox
             // 
-            this.ingredientesTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Ingredientes", true));
             this.ingredientesTextBox.Location = new System.Drawing.Point(110, 105);
             this.ingredientesTextBox.Multiline = true;
             this.ingredientesTextBox.Name = "ingredientesTextBox";
@@ -174,7 +120,6 @@
             // 
             // precoTextBox
             // 
-            this.precoTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "Preco", true));
             this.precoTextBox.Location = new System.Drawing.Point(110, 191);
             this.precoTextBox.Name = "precoTextBox";
             this.precoTextBox.Size = new System.Drawing.Size(121, 22);
@@ -182,7 +127,6 @@
             // 
             // ativoCheckBox
             // 
-            this.ativoCheckBox.DataBindings.Add(new System.Windows.Forms.Binding("CheckState", this.itemMenuSetBindingSource, "Ativo", true));
             this.ativoCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ativoCheckBox.Location = new System.Drawing.Point(292, 21);
             this.ativoCheckBox.Name = "ativoCheckBox";
@@ -193,7 +137,6 @@
             // 
             // categoriaIdComboBox
             // 
-            this.categoriaIdComboBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.itemMenuSetBindingSource, "CategoriaId", true));
             this.categoriaIdComboBox.FormattingEnabled = true;
             this.categoriaIdComboBox.Location = new System.Drawing.Point(110, 219);
             this.categoriaIdComboBox.Name = "categoriaIdComboBox";
@@ -202,13 +145,11 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.buttonDitem);
+            this.groupBox1.Controls.Add(this.photobutton);
             this.groupBox1.Controls.Add(this.buttonAitem);
             this.groupBox1.Controls.Add(this.buttonNitem);
             this.groupBox1.Controls.Add(this.categoriaIdComboBox);
-            this.groupBox1.Controls.Add(idLabel);
             this.groupBox1.Controls.Add(categoriaIdLabel);
-            this.groupBox1.Controls.Add(this.idComboBox);
             this.groupBox1.Controls.Add(this.ativoCheckBox);
             this.groupBox1.Controls.Add(nomeLabel);
             this.groupBox1.Controls.Add(this.nomeTextBox);
@@ -223,14 +164,15 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Novo Item";
             // 
-            // buttonDitem
+            // photobutton
             // 
-            this.buttonDitem.Location = new System.Drawing.Point(292, 180);
-            this.buttonDitem.Name = "buttonDitem";
-            this.buttonDitem.Size = new System.Drawing.Size(103, 52);
-            this.buttonDitem.TabIndex = 17;
-            this.buttonDitem.Text = "Eliminar Item";
-            this.buttonDitem.UseVisualStyleBackColor = true;
+            this.photobutton.Location = new System.Drawing.Point(292, 180);
+            this.photobutton.Name = "photobutton";
+            this.photobutton.Size = new System.Drawing.Size(103, 52);
+            this.photobutton.TabIndex = 17;
+            this.photobutton.Text = "Escolher Imagem";
+            this.photobutton.UseVisualStyleBackColor = true;
+            this.photobutton.Click += new System.EventHandler(this.photobutton_Click);
             // 
             // buttonAitem
             // 
@@ -240,6 +182,7 @@
             this.buttonAitem.TabIndex = 16;
             this.buttonAitem.Text = "Guardar Alterações";
             this.buttonAitem.UseVisualStyleBackColor = true;
+            this.buttonAitem.Click += new System.EventHandler(this.buttonAitem_Click);
             // 
             // buttonNitem
             // 
@@ -249,19 +192,34 @@
             this.buttonNitem.TabIndex = 15;
             this.buttonNitem.Text = "Novo Item";
             this.buttonNitem.UseVisualStyleBackColor = true;
+            this.buttonNitem.Click += new System.EventHandler(this.buttonNitem_Click);
+            // 
+            // listBoxMenu
+            // 
+            this.listBoxMenu.FormattingEnabled = true;
+            this.listBoxMenu.ItemHeight = 16;
+            this.listBoxMenu.Location = new System.Drawing.Point(12, 308);
+            this.listBoxMenu.Name = "listBoxMenu";
+            this.listBoxMenu.Size = new System.Drawing.Size(958, 228);
+            this.listBoxMenu.TabIndex = 16;
+            this.listBoxMenu.SelectedIndexChanged += new System.EventHandler(this.listBoxMenu_SelectedIndexChanged);
+            // 
+            // photo
+            // 
+            this.photo.FileName = "photo";
             // 
             // Form_Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(982, 330);
+            this.ClientSize = new System.Drawing.Size(982, 545);
+            this.Controls.Add(this.listBoxMenu);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.fotografiaPictureBox);
             this.Name = "Form_Menu";
             this.Text = "Menu";
             this.Load += new System.EventHandler(this.Form_Menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dB_RestGestDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itemMenuSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fotografiaPictureBox)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -272,10 +230,6 @@
         #endregion
 
         private DB_RestGestDataSet dB_RestGestDataSet;
-        private System.Windows.Forms.BindingSource itemMenuSetBindingSource;
-        private DB_RestGestDataSetTableAdapters.ItemMenuSetTableAdapter itemMenuSetTableAdapter;
-        private DB_RestGestDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.ComboBox idComboBox;
         private System.Windows.Forms.TextBox nomeTextBox;
         private System.Windows.Forms.PictureBox fotografiaPictureBox;
         private System.Windows.Forms.TextBox ingredientesTextBox;
@@ -283,8 +237,10 @@
         private System.Windows.Forms.CheckBox ativoCheckBox;
         private System.Windows.Forms.ComboBox categoriaIdComboBox;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button buttonDitem;
+        private System.Windows.Forms.Button photobutton;
         private System.Windows.Forms.Button buttonAitem;
         private System.Windows.Forms.Button buttonNitem;
+        private System.Windows.Forms.ListBox listBoxMenu;
+        private System.Windows.Forms.OpenFileDialog photo;
     }
 }
