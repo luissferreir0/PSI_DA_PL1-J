@@ -275,6 +275,9 @@
             // comboBoxMetodoPagamentoAtivo
             // 
             this.comboBoxMetodoPagamentoAtivo.FormattingEnabled = true;
+            this.comboBoxMetodoPagamentoAtivo.Items.AddRange(new object[] {
+            "Ativado",
+            "Desativado"});
             this.comboBoxMetodoPagamentoAtivo.Location = new System.Drawing.Point(76, 78);
             this.comboBoxMetodoPagamentoAtivo.Name = "comboBoxMetodoPagamentoAtivo";
             this.comboBoxMetodoPagamentoAtivo.Size = new System.Drawing.Size(196, 24);
@@ -366,6 +369,9 @@
             // comboBoxCategoriaEstado
             // 
             this.comboBoxCategoriaEstado.FormattingEnabled = true;
+            this.comboBoxCategoriaEstado.Items.AddRange(new object[] {
+            "Ativado",
+            "Desativado"});
             this.comboBoxCategoriaEstado.Location = new System.Drawing.Point(68, 83);
             this.comboBoxCategoriaEstado.Name = "comboBoxCategoriaEstado";
             this.comboBoxCategoriaEstado.Size = new System.Drawing.Size(196, 24);

@@ -28,6 +28,7 @@ namespace RestGest
 
         private void toolStripButtonClientes_Click(object sender, EventArgs e) // Formulário Clientes
         {
+
             try
             {
                 Form_GestaoClientes fclientes = new Form_GestaoClientes();
