@@ -59,8 +59,9 @@ namespace RestGest
 
         private void buttonNpedido_Click(object sender, EventArgs e)
         {
-            
-                 Pedido pedido = new Pedido();
+            try
+            {
+                Pedido pedido = new Pedido();
 
                  pedido.ValorTotal = (long)Convert.ToDouble(valorTotalTextBox.Text);
                  pedido.ClienteId = clienteIdComboBox.SelectedIndex;
@@ -78,6 +79,12 @@ namespace RestGest
 
                  RestGest.SaveChanges();
                  LerDados();
+            }
+            catch
+            {
+                MessageBox.Show("É necessário preencher todos os dados!!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
         }
 
         private void buttonApedido_Click(object sender, EventArgs e)

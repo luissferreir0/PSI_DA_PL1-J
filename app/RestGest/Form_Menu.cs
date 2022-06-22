@@ -103,38 +103,87 @@ namespace RestGest
 
         private void buttonNitem_Click(object sender, EventArgs e)
         {
-            try
-            {
-
                 ItemMenu menu = new ItemMenu();
-                menu.Nome = nomeTextBox.Text;
-                menu.Ingredientes = ingredientesTextBox.Text;
-                menu.Preco = (long)Convert.ToDouble(precoTextBox.Text);
-                menu.Fotografia = bytePhoto;
-                menu.CategoriaId = categoriaIdComboBox.SelectedIndex + 1;
+
+                try
+                {
+                    menu.Nome = nomeTextBox.Text;
+                }
+                catch
+                {
+                    MessageBox.Show("Erro Nome", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                try
+                {
+                    menu.Ingredientes = ingredientesTextBox.Text;
+                }
+                catch
+                {
+                    MessageBox.Show("Erro Ingredientes", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                
+                try
+                {
+                    menu.Preco = Convert.ToDecimal(precoTextBox.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("Erro Preco", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+
+                try
+                {
+                    menu.Fotografia = bytePhoto;
+                }
+                catch
+                {
+                    MessageBox.Show("Erro Foto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
+
+                try
+                {
+                    menu.CategoriaId = categoriaIdComboBox.SelectedIndex + 1;
+                }
+                catch
+                {
+                    MessageBox.Show("Erro Categoria", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
                 
                 bool ativo;
 
                 if (ativoCheckBox.Checked)
                 {
-                    ativo = true;
+                    ativo = false;
                 }
                 else
                 {
-                    ativo = false;
+                    ativo = true;
                 }
 
-                menu.Ativo = ativo;
+                try
+                {
+                    menu.Ativo = ativo;
+                }
+                catch
+                {
+                    MessageBox.Show("Erro Ativo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
 
                 RestGest.ItemMenuSet.Add(menu);
+            try 
+            { 
                 RestGest.SaveChanges();
-                LerDados();
-
             }
             catch
             {
-                MessageBox.Show("É necessário preencher todos os dados!!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Erro ao Salvar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+                LerDados();
         }
 
         private void buttonAitem_Click(object sender, EventArgs e)
