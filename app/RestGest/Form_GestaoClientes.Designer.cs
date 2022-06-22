@@ -30,8 +30,6 @@
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.listBoxCadeiaRestCliente = new System.Windows.Forms.ListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBoxRua = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -53,7 +51,6 @@
             this.listBoxClientes = new System.Windows.Forms.ListBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,7 +66,6 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.groupBox4);
             this.groupBox2.Controls.Add(this.groupBox3);
             this.groupBox2.Controls.Add(this.buttonRemoverCliente);
             this.groupBox2.Controls.Add(this.listBoxClientes);
@@ -79,24 +75,6 @@
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Lista dos Clientes";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.listBoxCadeiaRestCliente);
-            this.groupBox4.Location = new System.Drawing.Point(518, 185);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(280, 246);
-            this.groupBox4.TabIndex = 3;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Cadeias de Restaurantes:";
-            // 
-            // listBoxCadeiaRestCliente
-            // 
-            this.listBoxCadeiaRestCliente.FormattingEnabled = true;
-            this.listBoxCadeiaRestCliente.Location = new System.Drawing.Point(7, 16);
-            this.listBoxCadeiaRestCliente.Name = "listBoxCadeiaRestCliente";
-            this.listBoxCadeiaRestCliente.Size = new System.Drawing.Size(267, 225);
-            this.listBoxCadeiaRestCliente.TabIndex = 0;
             // 
             // groupBox3
             // 
@@ -118,7 +96,7 @@
             this.groupBox3.Controls.Add(this.label1);
             this.groupBox3.Location = new System.Drawing.Point(7, 185);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(504, 247);
+            this.groupBox3.Size = new System.Drawing.Size(791, 247);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Criar Cliente";
@@ -127,7 +105,7 @@
             // 
             this.textBoxRua.Location = new System.Drawing.Point(43, 142);
             this.textBoxRua.Name = "textBoxRua";
-            this.textBoxRua.Size = new System.Drawing.Size(454, 20);
+            this.textBoxRua.Size = new System.Drawing.Size(742, 20);
             this.textBoxRua.TabIndex = 15;
             // 
             // label7
@@ -143,7 +121,7 @@
             // 
             this.textBoxCP.Location = new System.Drawing.Point(84, 68);
             this.textBoxCP.Name = "textBoxCP";
-            this.textBoxCP.Size = new System.Drawing.Size(413, 20);
+            this.textBoxCP.Size = new System.Drawing.Size(701, 20);
             this.textBoxCP.TabIndex = 13;
             // 
             // label6
@@ -159,7 +137,7 @@
             // 
             this.textBoxPais.Location = new System.Drawing.Point(43, 118);
             this.textBoxPais.Name = "textBoxPais";
-            this.textBoxPais.Size = new System.Drawing.Size(454, 20);
+            this.textBoxPais.Size = new System.Drawing.Size(742, 20);
             this.textBoxPais.TabIndex = 11;
             // 
             // label5
@@ -175,7 +153,7 @@
             // 
             this.buttonAlterarDados.Location = new System.Drawing.Point(6, 217);
             this.buttonAlterarDados.Name = "buttonAlterarDados";
-            this.buttonAlterarDados.Size = new System.Drawing.Size(491, 23);
+            this.buttonAlterarDados.Size = new System.Drawing.Size(779, 23);
             this.buttonAlterarDados.TabIndex = 9;
             this.buttonAlterarDados.Text = "ALTERAR DADOS ";
             this.buttonAlterarDados.UseVisualStyleBackColor = true;
@@ -185,7 +163,7 @@
             // 
             this.buttonCriarCliente.Location = new System.Drawing.Point(6, 192);
             this.buttonCriarCliente.Name = "buttonCriarCliente";
-            this.buttonCriarCliente.Size = new System.Drawing.Size(491, 22);
+            this.buttonCriarCliente.Size = new System.Drawing.Size(779, 22);
             this.buttonCriarCliente.TabIndex = 8;
             this.buttonCriarCliente.Text = "CRIAR";
             this.buttonCriarCliente.UseVisualStyleBackColor = true;
@@ -195,7 +173,7 @@
             // 
             this.textBoxContribuinte.Location = new System.Drawing.Point(88, 167);
             this.textBoxContribuinte.Name = "textBoxContribuinte";
-            this.textBoxContribuinte.Size = new System.Drawing.Size(409, 20);
+            this.textBoxContribuinte.Size = new System.Drawing.Size(697, 20);
             this.textBoxContribuinte.TabIndex = 7;
             // 
             // label4
@@ -211,21 +189,21 @@
             // 
             this.textBoxTelemovel.Location = new System.Drawing.Point(71, 44);
             this.textBoxTelemovel.Name = "textBoxTelemovel";
-            this.textBoxTelemovel.Size = new System.Drawing.Size(426, 20);
+            this.textBoxTelemovel.Size = new System.Drawing.Size(714, 20);
             this.textBoxTelemovel.TabIndex = 5;
             // 
             // textBoxCidade
             // 
             this.textBoxCidade.Location = new System.Drawing.Point(52, 92);
             this.textBoxCidade.Name = "textBoxCidade";
-            this.textBoxCidade.Size = new System.Drawing.Size(445, 20);
+            this.textBoxCidade.Size = new System.Drawing.Size(733, 20);
             this.textBoxCidade.TabIndex = 4;
             // 
             // textBoxNome
             // 
             this.textBoxNome.Location = new System.Drawing.Point(52, 20);
             this.textBoxNome.Name = "textBoxNome";
-            this.textBoxNome.Size = new System.Drawing.Size(445, 20);
+            this.textBoxNome.Size = new System.Drawing.Size(733, 20);
             this.textBoxNome.TabIndex = 3;
             // 
             // label3
@@ -286,7 +264,6 @@
             this.Load += new System.EventHandler(this.Form_GestaoClientes_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -310,8 +287,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonAlterarDados;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ListBox listBoxCadeiaRestCliente;
         private System.Windows.Forms.TextBox textBoxRua;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBoxCP;
