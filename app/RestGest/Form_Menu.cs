@@ -103,127 +103,175 @@ namespace RestGest
 
         private void buttonNitem_Click(object sender, EventArgs e)
         {
-                ItemMenu menu = new ItemMenu();
+            ItemMenu menu = new ItemMenu();
+            
+            try
+            {
+                menu.Nome = nomeTextBox.Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-                try
-                {
-                    menu.Nome = nomeTextBox.Text;
-                }
-                catch
-                {
-                    MessageBox.Show("Erro Nome", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+            try
+            {
+                menu.Ingredientes = ingredientesTextBox.Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-                try
-                {
-                    menu.Ingredientes = ingredientesTextBox.Text;
-                }
-                catch
-                {
-                    MessageBox.Show("Erro Ingredientes", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
 
-                
-                try
-                {
-                    menu.Preco = Convert.ToDecimal(precoTextBox.Text);
-                }
-                catch
-                {
-                    MessageBox.Show("Erro Preco", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
+            try
+            {
+                menu.Preco = Convert.ToDecimal(precoTextBox.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-                try
-                {
-                    menu.Fotografia = bytePhoto;
-                }
-                catch
-                {
-                    MessageBox.Show("Erro Foto", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                
+            try
+            {
+                menu.Fotografia = bytePhoto;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-                try
-                {
-                    menu.CategoriaId = categoriaIdComboBox.SelectedIndex + 1;
-                }
-                catch
-                {
-                    MessageBox.Show("Erro Categoria", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                
-                
-                bool ativo;
 
-                if (ativoCheckBox.Checked)
-                {
-                    ativo = false;
-                }
-                else
-                {
-                    ativo = true;
-                }
+            try
+            {
+                menu.CategoriaId = categoriaIdComboBox.SelectedIndex + 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
 
-                try
-                {
-                    menu.Ativo = ativo;
-                }
-                catch
-                {
-                    MessageBox.Show("Erro Ativo", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                }
-                
 
-                RestGest.ItemMenuSet.Add(menu);
+            bool ativo;
+
+            if (ativoCheckBox.Checked)
+            {
+                ativo = false;
+            }
+            else
+            {
+                ativo = true;
+            }
+
+            try
+            {
+                menu.Ativo = ativo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+            RestGest.ItemMenuSet.Add(menu);
+            
             try 
             { 
                 RestGest.SaveChanges();
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Erro ao Salvar", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
-                LerDados();
+            LerDados();
         }
 
         private void buttonAitem_Click(object sender, EventArgs e)
         {
+            ItemMenu menu =
+                (ItemMenu)listBoxMenu.SelectedItem;
+
             try
             {
-                ItemMenu menu =
-                    (ItemMenu)listBoxMenu.SelectedItem;
-                if (menu == null)
-                {
-                    return;
-                }
-
-                var menuDb = RestGest
-                    .ItemMenuSet.Find(menu.Id);
-                menuDb.Nome = nomeTextBox.Text;
-                menuDb.Ingredientes = ingredientesTextBox.Text;
-                menuDb.Preco = (long)Convert.ToDouble(precoTextBox.Text);
-
-                bool ativo;
-
-                if (ativoCheckBox.Checked == true)
-                {
-                    ativo = true;
-                }
-                else
-                {
-                    ativo = false;
-                }
-
-                menuDb.Ativo = ativo;
-
-                RestGest.SaveChanges();
-                LerDados();
+                menu.Nome = nomeTextBox.Text;
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Os dados não estão com as correções necessárias para proceder à alteração!!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso! Erro No Nome", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            try
+            {
+                menu.Ingredientes = ingredientesTextBox.Text;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso! Erro Nos Ingredientes", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+            try
+            {
+                menu.Preco = Convert.ToDecimal(precoTextBox.Text);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso! Erro No Preço", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            try
+            {
+                menu.Fotografia = bytePhoto;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso! Erro Na Foto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+            try
+            {
+                menu.CategoriaId = categoriaIdComboBox.SelectedIndex + 1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso! Erro Na Categoria", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+            bool ativo;
+
+            if (ativoCheckBox.Checked)
+            {
+                ativo = false;
+            }
+            else
+            {
+                ativo = true;
+            }
+
+            try
+            {
+                menu.Ativo = ativo;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso! Erro no Estado do Item", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+            RestGest.ItemMenuSet.Add(menu);
+
+            try
+            {
+                RestGest.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.\n Erro: " + ex.Message, "Aviso! Erro ao Salvar", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            LerDados();
         }
 
         private void listBoxMenu_SelectedIndexChanged(object sender, EventArgs e)

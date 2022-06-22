@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Security;
 
 namespace RestGest
 {
@@ -59,31 +60,73 @@ namespace RestGest
 
         private void buttonNpedido_Click(object sender, EventArgs e)
         {
+            Pedido pedido = new Pedido();
+
             try
             {
-                Pedido pedido = new Pedido();
-
-                 pedido.ValorTotal = (long)Convert.ToDouble(valorTotalTextBox.Text);
-                 pedido.ClienteId = clienteIdComboBox.SelectedIndex;
-                 pedido.TrabalhadorId = trabalhadorIdComboBox.SelectedIndex;
-                 pedido.EstadoId = estadoIdcomboBox.SelectedIndex;
-                 pedido.RestauranteId = restauranteIdComboBox.SelectedIndex;
-
-                 RestGest.PedidoSet.Add(pedido);
-
-                 if (string.IsNullOrEmpty(valorTotalTextBox.Text))
-                 {
-                     return;
-                 }
-                 RestGest.PedidoSet.Add(pedido);
-
-                 RestGest.SaveChanges();
-                 LerDados();
+                pedido.ValorTotal = (long)Convert.ToDouble(valorTotalTextBox.Text);
             }
             catch
             {
-                MessageBox.Show("É necessário preencher todos os dados!!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Erro no Valor Total", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            try
+            {
+                pedido.ClienteId = clienteIdComboBox.SelectedIndex;
+            }
+            catch
+            {
+                MessageBox.Show("Erro na escolha de Cliente", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            try
+            {
+                pedido.TrabalhadorId = trabalhadorIdComboBox.SelectedIndex;
+            }
+            catch
+            {
+                MessageBox.Show("Erro na escolha de Trabalhador", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            try
+            {
+                pedido.EstadoId = estadoIdcomboBox.SelectedIndex;
+            }
+            catch
+            {
+                MessageBox.Show("Erro no Estado do Pedido", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+            try
+            {
+                pedido.RestauranteId = restauranteIdComboBox.SelectedIndex;
+            }
+            catch
+            {
+                MessageBox.Show("Erro na escolha de Restaurante", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
+            RestGest.PedidoSet.Add(pedido);
+
+            if (string.IsNullOrEmpty(valorTotalTextBox.Text))
+            {
+                return;
+            }
+            
+            RestGest.PedidoSet.Add(pedido);
+
+            try
+            { 
+                 RestGest.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Não é possível salvar.. Erro reportado : " + ex.Message, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            LerDados();
+            
 
         }
 

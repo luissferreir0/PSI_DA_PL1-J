@@ -178,6 +178,7 @@
             this.buttonNpedido.TabIndex = 13;
             this.buttonNpedido.Text = "Novo Pedido";
             this.buttonNpedido.UseVisualStyleBackColor = true;
+            this.buttonNpedido.Click += new System.EventHandler(this.buttonNpedido_Click);
             // 
             // valorTotalTextBox
             // 

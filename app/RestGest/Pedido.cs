@@ -39,8 +39,7 @@ namespace RestGest
 
         public override string ToString()
         {
-            return $"{ValorTotal} | {Cliente.Nome} | {Trabalhador.Nome} |" +
-                $" {Estado.NomeEstado} | {Restaurante.Nome}";
+            return $"{ValorTotal} | {Estado.NomeEstado} | {Restaurante.Nome}";
         }
     }
 }
