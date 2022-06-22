@@ -18,7 +18,19 @@ namespace RestGest
         public string Nome { get; set; }
         public long Telemovel { get; set; }
         public int IdMorada { get; set; }
-    
+
+        public bool Ativo { get; set; }
+
         public virtual Morada Morada { get; set; }
+
+        public virtual Pessoa pressoa { get; set; }
+        public virtual Trabalhador Trabalhador { get; set; }
+
+        public override string ToString()
+        {
+            return this.Nome;
+        }
+
+
     }
 }

@@ -11,7 +11,7 @@ namespace RestGest
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class Trabalhador : Pessoa
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -19,13 +19,23 @@ namespace RestGest
         {
             this.Pedido = new HashSet<Pedido>();
         }
-    
+
         public decimal Salario { get; set; }
         public string Posicao { get; set; }
         public int RestauranteId { get; set; }
-    
+
         public virtual Restaurante Restaurante { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Pedido> Pedido { get; set; }
+
+        public virtual Pessoa Pessoa { get; set; }
+        public virtual Restaurante restaurante { get; set; }
+
+
+        public override string ToString()
+        {
+            return this.Posicao + " " + this.Pessoa.ToString();
+        }
+
     }
 }
